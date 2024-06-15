@@ -1,0 +1,13 @@
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .contact-info {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .contact-info p {
+    margin-bottom: 10px;
+  }

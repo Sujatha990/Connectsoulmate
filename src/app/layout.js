@@ -1,5 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import "@fortawesome/fontawesome-free/css/all.min.css"
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body class={inter.className}>
+      <NavBar/>
+      <NavBar2/>
+        {children}
+        
+      </body>
     </html>
   );
 }

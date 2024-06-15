@@ -1,0 +1,51 @@
+
+  
+  .search-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-group-toggle {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-group-toggle label.btn {
+    flex-grow: 1;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-primary.active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  .dropdown-icon::after {
+    content: '\25BC'; /* Unicode character for a downward-pointing triangle */
+    margin-left: 5px; /* Adjust spacing between the text and the icon */
+  }
+  .btn-group-toggle .btn input[type="radio"] {
+    display: none; /* Hide the default radio button */
+  }
+  
+  .btn-group-toggle .btn.active {
+    background-color: #007bff; /* Change the background color for active state */
+  }
+ 
+  

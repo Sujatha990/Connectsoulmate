@@ -1,0 +1,118 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .btn-group-toggle {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .btn {
+    font-size: 16px;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+  }
+  
+  .search-section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border-radius: 0;
+  }
+  
+  .btn-group-toggle .btn.active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-group-toggle .btn.active:hover {
+    background-color: #004085;
+    border-color: #004085;
+  }
+  .btn-group-toggle .btn input[type="radio"] {
+    display: none; /* Hide the default radio button */
+  }
+  
+  .btn-group-toggle .btn.active {
+    background-color: #007bff; /* Change the background color for active state */
+  }
+  
+  .search-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23333" d="M6 6L0 0h12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    background-size: 8px 6px;
+    padding-right: 30px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .btn-option {
+    margin-right: 10px;
+  }
+  
+  .btn-option.active {
+    background-color: #007bff;
+  }
+  
+  .btn-option.active:focus, .btn-option.active:hover {
+    background-color: #0069d9;
+  }
