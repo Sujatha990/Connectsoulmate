@@ -1,0 +1,21 @@
+.carousel-item .card {
+    position: relative;
+  }
+  .carousel-item .card img {
+    max-height: 300px; /* Adjust the max height of the image */
+    object-fit: cover;
+  }
+  .carousel-item .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px;
+    text-align: center;
+  }
+  .carousel-item .card-title,
+  .carousel-item .card-text,
+  .carousel-item .btn-primary {
+    color: #fff; /* White text color */
+  }

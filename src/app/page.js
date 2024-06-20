@@ -5,6 +5,7 @@ import SucessStories from './SucessStories';
 import Footer from "./Footer";
 import Register from './Register';
 import Upgrade from './Upgrade';
+import Service from './Service';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <Side/>
     <About/>
     <Register/>
+    <Service/>
     <Upgrade/>
     <SucessStories/>
     <Footer/>

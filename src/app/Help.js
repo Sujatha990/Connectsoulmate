@@ -30,9 +30,7 @@ const Help = () => {
       <div class="col-md-6">
         <div class="contact-info">
           <h2>Contact Information</h2>
-          <p><strong>Address:</strong> 123 Main Street, City, Country</p>
           <p><strong>Email:</strong> example@example.com</p>
-          <p><strong>Phone:</strong> +1234567890</p>
         </div>
       </div>
     </div>

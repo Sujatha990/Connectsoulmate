@@ -1,0 +1,11 @@
+.about-us {
+    padding: 50px 0;
+}
+.about-us img {
+    max-width: 100%;
+    height: auto;
+}
+.about-us-description {
+    display: flex;
+    align-items: center;
+}

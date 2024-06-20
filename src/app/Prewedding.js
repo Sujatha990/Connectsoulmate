@@ -1,12 +1,10 @@
 import React from 'react'
-import "./search2.css";
-import Help from './Help';
+import Help from './Help'
 
-
-
-const Search2 = () => {
+const Prewedding = () => {
   return (
     <div>
+       <div>
        <div className="container about-us">
       <div className="row">
         <div className="col-md-6 about-us-description">
@@ -27,14 +25,14 @@ radiance throughout the phases of seeking a matrimonial alliance, the wedding fe
 beyond.            </p> 
             
        <h2>Some deliverables of our dietician service include:</h2>
-       <p>
+       
       <p> 1. Comprehensive full-body health assessment to establish your physical well-being status.</p>
 <p>2. Preliminary planning and counselling sessions with our expert dieticians.</p>
 <p>3. Development of a personalized daily food schedule, complete with recommended food</p>
 items.
 <p>4. Provision of exercise recommendations and guidance for incorporating physical activities.</p>
 <p>5. Regular evaluations and health checks to monitor your progress.</p>
-       </p>
+       
             
               
             
@@ -52,8 +50,8 @@ items.
       <Help/>
     </div>
     </div>
-    
+    </div>
   )
 }
 
-export default Search2
+export default Prewedding
