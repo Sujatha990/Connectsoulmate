@@ -204,7 +204,7 @@ function Search() {
               </select>
             </div>
 
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
           </div>
         )}
 
@@ -454,7 +454,7 @@ function Search() {
                 <option value="Online right now">Online right now</option>
               </select>
             </div>
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
           </div>
         )}
 
@@ -586,7 +586,7 @@ function Search() {
             </div>
 
       
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
           </div>
         )}
 
@@ -596,7 +596,7 @@ function Search() {
               <label htmlFor="keyword">Keyword</label>
               <input type="text" className="form-control" id="keyword" placeholder="Enter keyword" />
             </div>
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
           </div>
         )}
 
@@ -606,14 +606,14 @@ function Search() {
               <label htmlFor="userId">User ID</label>
               <input type="text" className="form-control" id="userId" placeholder="Enter user ID" />
             </div>
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
           </div>
         )}
 
         {selectedOption === 'online' && (
           <div id="whoIsOnline" className="search-section">
             <p>Showing all users who are currently online.</p>
-            <button type="submit" className="btn btn-primary">Refresh</button>
+            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Refresh</button>
           </div>
         )}
       </form>

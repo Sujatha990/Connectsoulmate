@@ -16,7 +16,7 @@ const Upgrade = () => {
 
     <div class="row text-center">
         <div class="col-md-3">
-            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EEA47FFF"}}>
+            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EDF4F2"}}>
                 <div class="card-body">
                     <h4 class="card-title">Free</h4>
                     <h1 class="card-price">₹0</h1>
@@ -28,13 +28,13 @@ const Upgrade = () => {
                         <li><span class="cross">✘</span>No contacts</li>
 
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Sign Up for Free</button>
+                    <button type="button" class="btn btn-lg btn-block bg-white">Sign Up for Free</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EEA47FFF"}}>
+            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EDF4F2"}}>
                 <div class="card-body">
                     <h4 class="card-title">Silver</h4>
                     <h1 class="card-price">₹999</h1>
@@ -45,13 +45,13 @@ const Upgrade = () => {
                         <li><span class="tick">✔</span>Interest notifications</li>
                         <li><span class="tick">✔</span>Priority support</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Get Silver</button>
+                    <button type="button" class="btn btn-lg btn-block " style={{background:" #C0C0C0"}}>Get Silver</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card mb-4 shadow-sm"style={{backgroundColor:"#EEA47FFF"}}>
+            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EDF4F2"}}>
                 <div class="card-body">
                     <h4 class="card-title">Gold</h4>
                     <h1 class="card-price">₹3,999</h1>
@@ -63,13 +63,13 @@ const Upgrade = () => {
                         <li><span class="tick">✔</span>Matching reports</li>
                        
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Get Gold</button>
+                    <button type="button" class="btn btn-lg btn-block " style={{backgroundColor:"#F3DB74FF"}}>Get Gold</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EEA47FFF"}}>
+            <div class="card mb-4 shadow-sm" style={{backgroundColor:"#EDF4F2"}}>
                 <div class="card-body">
                     <h4 class="card-title">Platinum</h4>
                     <h1 class="card-price">₹9,999</h1>
@@ -81,7 +81,7 @@ const Upgrade = () => {
                         <li><span class="tick">✔</span>Match assistance</li>
                        
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Get Platinum</button>
+                    <button type="button" class="btn btn-lg btn-block " style={{backgroundColor:"#E5E4E2"}}>Get Platinum</button>
                 </div>
             </div>
         </div>

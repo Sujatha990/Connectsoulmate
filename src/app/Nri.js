@@ -36,7 +36,7 @@ exceptional efforts to overcome geographical distances and facilitate meaningful
           </div>
         </div>
         <div className="col-md-6">
-          <img src="Images/NRI.jpeg" alt="About Us Image" style={{height:"500px",width:"500px"}} />
+          <img src="Images/NRI.jpeg" alt="About Us Image" style={{height:"300px",width:"400px"}} />
         </div>
       </div>
     </div>

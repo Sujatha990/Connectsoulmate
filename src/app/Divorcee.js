@@ -32,7 +32,7 @@ journey towards a new relationship easier and more meaningful.</p>
           </div>
         </div>
         <div className="col-md-6">
-          <img src="Images/Divorcee.jpeg" alt="About Us Image" style={{height:"500px",width:"500px"}} />
+          <img src="Images/Divorcee.jpeg" alt="About Us Image" style={{height:"300px",width:"400px"}} />
         </div>
       </div>
     </div>

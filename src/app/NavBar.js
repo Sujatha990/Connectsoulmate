@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import "./navbar.css";
 
 const NavBar = () => {
     useEffect(()=>{
         require("bootstrap/dist/js/bootstrap.js");
     },[]);
   return (
-
 
       <nav class="navbar navbar-expand-lg bg-primary text-white p-3 pt-3 pb-3">
           <div class="container-fluid">
@@ -21,7 +21,7 @@ const NavBar = () => {
 
                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " style={{fontSize:"20px"}}>
                       <li class="nav-item">
-                          <Link class="nav-link text-white" href="/login">
+                          <Link class="nav-link  text-white" href="/login">
                               <i class="fas fa-sign-in-alt"></i> Login
                           </Link>
                       </li>
@@ -32,26 +32,23 @@ const NavBar = () => {
                           </Link>
                       </li>
                       <li class="nav-item">
-                          <Link class="nav-link text-white" href="/help">
+                          <Link class="nav-link  text-white" href="/help" >
                               <i class="fas fa-question-circle"></i> Help
                           </Link>
                       </li>
                       <li class="nav-item">
-                          <Link class="nav-link text-white" href="/search">
+                          <Link class="nav-link text-white" href="/search" >
                               <i class="fas fa-search"></i> Search
                           </Link>
                       </li>
-                      <li class="nav-item">
-                          <Link class="nav-link text-white" href="/search2">
-                              <i class="fas fa-search"></i> Search2
-                          </Link>
-                      </li>
+
                       
                   </ul>
 
               </div>
           </div>
       </nav>
+      
 
   )
 }

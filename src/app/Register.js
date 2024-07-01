@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import "./register.css";
 import Link from 'next/link';
+import { Authservice } from '@/Services/Authservice';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -56,8 +57,12 @@ const Register = () => {
     });
   };
 
-  const nextStep = () => {
+  const nextStep=async () => {
+    if (currentStep===1){
+      const result=await Authservice.register({name:formData.name,password:formData.password})
+    }
     setCurrentStep(currentStep + 1);
+    
   };
 
   const prevStep = () => {
@@ -98,9 +103,9 @@ const Register = () => {
                     <div className="card-body p-md-5 text-black">
                       {currentStep === 1 && (
                         <>
-                          <h3 className="mb-5 text-uppercase " style={{textAlign:'center',fontSize:"50px",color:"red",marginBottom:"20px"}}>Register</h3>
+                          <h3 className="mb-5 text-uppercase display-4 " style={{textAlign:'center',fontSize:"50px",color:"red",marginBottom:"20px"}}>Register</h3>
                           <h2 className="text-center mb-4">Find your perfect match</h2>
-                          <div className="form-group" style={{ marginBottom: '20px' }}>
+                          <div className="form-group select-container " style={{ marginBottom: '20px' }}>
                             <label htmlFor="profile">Select Profile</label>
                             <select
                               className="form-control"
@@ -133,7 +138,7 @@ const Register = () => {
                               required
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="phoneNumber">Phone Number</label>
                             <input
                               type="tel"
@@ -153,7 +158,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Please provide us with your basic details</h2>
-                          <div className="form-group">
+                          <div className="form-group "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="dateOfBirth">Date of Birth</label>
                             <input
                               type="date"
@@ -165,7 +170,7 @@ const Register = () => {
                               required
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container " style={{ marginBottom: '20px' }}>
                             <label htmlFor="religion">Religion</label>
                             <select
                               className="form-control"
@@ -184,7 +189,7 @@ const Register = () => {
                               <option value="Other">Other</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container " style={{ marginBottom: '20px' }}>
                             <label htmlFor="motherTongue">Mother Tongue</label>
                             <select
                               className="form-control"
@@ -207,7 +212,7 @@ const Register = () => {
                               <option value="punjabi">Punjabi</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="email">Email</label>
                             <input
                               type="email"
@@ -220,7 +225,7 @@ const Register = () => {
                               required
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="password">Password</label>
                             <input
                               type="password"
@@ -233,7 +238,7 @@ const Register = () => {
                               required
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="familyDetails">Family Details</label>
                             <textarea
                               className="form-control"
@@ -250,7 +255,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Religion/Caste details help us find better matches</h2>
-                          <div className="form-group">
+                          <div className="form-group select-container " style={{ marginBottom: '20px' }}>
                             <label htmlFor="caste">Caste</label>
                             <select
                               className="form-control"
@@ -267,7 +272,7 @@ const Register = () => {
                               <option value="Other">Other</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="gothram">Gothram</label>
                             <input
                               type="text"
@@ -279,7 +284,7 @@ const Register = () => {
                               placeholder="Enter gothram"
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container " style={{ marginBottom: '20px' }}>
                             <label htmlFor="dosh">Dosh</label>
                             <select
                               className="form-control"
@@ -302,7 +307,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Personal Information</h2>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="maritalStatus">Marital Status</label>
                             <select
                               className="form-control"
@@ -318,7 +323,7 @@ const Register = () => {
                               <option value="Widowed">Widowed</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="height">Height</label>
                             <input
                               type="text"
@@ -330,7 +335,7 @@ const Register = () => {
                               placeholder="Enter height"
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="familyStatus">Family Status</label>
                             <select
                               className="form-control"
@@ -346,7 +351,7 @@ const Register = () => {
                               <option value="Affluent">Affluent</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="familyType">Family Type</label>
                             <select
                               className="form-control"
@@ -360,7 +365,7 @@ const Register = () => {
                               <option value="Nuclear">Nuclear</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="familyValues">Family Values</label>
                             <select
                               className="form-control"
@@ -376,7 +381,7 @@ const Register = () => {
                               <option value="Liberal">Liberal</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="disability">Disability (if any)</label>
                             <input
                               type="text"
@@ -394,7 +399,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Education and Occupation details help us find better matches</h2>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="highestEducation">Highest Education</label>
                             <select
                               className="form-control"
@@ -411,7 +416,7 @@ const Register = () => {
                               <option value="Doctorate">Doctorate</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group select-container "  style={{ marginBottom: '20px' }}>
                             <label htmlFor="employedIn">Employed In</label>
                             <select
                               className="form-control"
@@ -428,7 +433,7 @@ const Register = () => {
                               <option value="Not working">Not working</option>
                             </select>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="occupation">Occupation</label>
                             <input
                               type="text"
@@ -440,7 +445,7 @@ const Register = () => {
                               placeholder="Enter occupation"
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="annualIncome">Annual Income</label>
                             <input
                               type="text"
@@ -452,7 +457,7 @@ const Register = () => {
                               placeholder="Enter annual income"
                             />
                           </div>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="aboutYourself">About Yourself</label>
                             <textarea
                               className="form-control"
@@ -469,7 +474,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Upload Photo</h2>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <label htmlFor="photo">Upload Photo</label>
                             <input
                               type="file"
@@ -486,7 +491,7 @@ const Register = () => {
                         <>
                           <h3 className="mb-5 text-uppercase"></h3>
                           <h2 className="text-center mb-4">Terms And Conditions</h2>
-                          <div className="form-group">
+                          <div className="form-group"  style={{ marginBottom: '20px' }}>
                             <input
                               type="checkbox"
                               id="termsCheckbox"

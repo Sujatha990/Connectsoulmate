@@ -8,10 +8,16 @@
 
 .about-us {
     padding: 50px 0;
+    max-width: 100%; /* Ensures the content doesn't exceed the window width */
+    margin: 0 auto; /* Centers the content horizontally */
+    box-sizing: border-box; /* Includes padding in the width calculation */
 }
+
 .about-us img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensures images resize proportionally */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures no extra space under the image */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 .about-us-description {
     display: flex;
@@ -64,3 +70,5 @@
         max-width: 100px;
     }
 }
+
+

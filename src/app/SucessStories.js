@@ -4,7 +4,7 @@ const SucessStories = () => {
   return (
     
 <div class="container success-stories">
-    <h2>Success Stories</h2>
+    <h2 class='display-4'>Success Stories</h2>
     <div class="row">
         <div class="col-md-4">
             <div class="story">

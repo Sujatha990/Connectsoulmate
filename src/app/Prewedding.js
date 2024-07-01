@@ -1,5 +1,6 @@
 import React from 'react'
 import Help from './Help'
+import Footer from './Footer'
 
 const Prewedding = () => {
   return (
@@ -48,6 +49,7 @@ items.
     <div>
       <h2 style={{textAlign:"center"}}>For More Details ContactUs</h2>
       <Help/>
+      <Footer/>
     </div>
     </div>
     </div>

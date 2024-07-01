@@ -35,7 +35,7 @@ considerate platform for those seeking a new chance at companionship.</p>
           </div>
         </div>
         <div className="col-md-6">
-          <img src="Images/Remarriage.jpg" alt="About Us Image" style={{height:"500px",width:"500px"}} />
+          <img src="Images/Remarriage.jpg" alt="About Us Image" style={{height:"300px",width:"400px"}} />
         </div>
       </div>
     </div>

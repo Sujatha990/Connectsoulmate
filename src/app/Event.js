@@ -57,7 +57,7 @@ mile to infuse personal touches that make your celebration uniquely yours.</p>
  </div>
         </div>
         <div className="col-md-6">
-          <img src="Images/Events.jpeg" alt="About Us Image" style={{height:"300px",width:"400px"}} />
+          <img src="Images/Events.jpeg" alt="About Us Image" style={{height:"250px",width:"400px"}} />
         </div>
       </div>
     </div>

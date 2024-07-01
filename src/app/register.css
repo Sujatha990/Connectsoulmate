@@ -7,3 +7,29 @@
   .card-registration .select-arrow {
   top: 13px;
   }
+  .select-container {
+    position: relative;
+    display: inline-block;
+    width: 550px; /* Increase the width as needed */
+  }
+  
+  .select-container select {
+    width: 100%; /* Ensure the select box takes the full width of the container */
+    padding-right: 30px; /* Adjust padding to make space for the arrow */
+    -webkit-appearance: none; /* Remove default arrow */
+    -moz-appearance: none; /* Remove default arrow */
+    appearance: none; /* Remove default arrow */
+    box-sizing: border-box; /* Include padding in the element's width and height */
+  }
+  
+  .select-container::after {
+    content: '▼'; /* Unicode character for the arrow */
+    position: absolute;
+    right: 10px; /* Position the arrow inside the container */
+    top: 70%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
+  }
+  form-group{
+    margin-bottom: 20px;
+  }

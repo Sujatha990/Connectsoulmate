@@ -27,7 +27,7 @@ committed to aiding you in discovering your perfect match.        </p>
           </div>
         </div>
         <div className="col-md-6">
-          <img src="Images/Assisted.jpeg" alt="About Us Image" style={{height:"500px",width:"500px"}} />
+          <img src="Images/Assisted.jpeg" alt="About Us Image" style={{height:"300px",width:"400px"}} />
         </div>
       </div>
     </div>

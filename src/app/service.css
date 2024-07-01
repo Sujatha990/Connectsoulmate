@@ -19,3 +19,16 @@
   .carousel-item .btn-primary {
     color: #fff; /* White text color */
   }
+  /* service.css */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Scale the image to 1.1 times its original size on hover */
+}

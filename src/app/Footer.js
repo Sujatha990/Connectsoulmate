@@ -9,13 +9,20 @@ import {
 
 const Footer = () => {
   return (
-    <footer class="text-center text-lg-start  text-muted  p-3 mb-2 bg-info bg-gradient text-dark">
-      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
+    <footer class="text-center text-lg-start  text-muted  p-3 mb-2  text-dark" style={{backgroundColor:"#EDF4F2"}}>
+      
     
-        <div>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>ConnectSoulmate
+              </h6>
+              <p>
+              In the rich tapestry of Indian culture, the traditional practice of arranged marriage holds a significant place. For generations, parents have taken on the important task of seeking ideal life partners for their children, collaborating with relatives, marriage bureaus, friends, and various intermediaries.
+              </p>
+              <div>
           <a href="" class="me-4 text-reset">
             <i class="fab fa-facebook-f"></i>
           </a>
@@ -35,19 +42,6 @@ const Footer = () => {
             <i class="fab fa-github"></i>
           </a>
         </div>
-      </section>
-    
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>ConnectSoulmate
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
-              </p>
             </div>
     
            
@@ -80,16 +74,14 @@ const Footer = () => {
                 <i class="fas fa-envelope me-3"></i>
                 info@example.com
               </p>
-              <p><FontAwesomeIcon
-        icon={faphonevolume}
-    ></FontAwesomeIcon> + 01 234 567 88</p>
-              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
             </div>
           </div>
         </div>
       </section>
     
-      <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+      <div class="text-center p-4">
 
         © 2021 Copyright:
         <a class="text-reset fw-bold" href="https://ConnectSoulmate.com/">ConnectSoulmate.com</a>

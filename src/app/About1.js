@@ -65,12 +65,12 @@ your individual needs. We are dedicated to supporting you in your quest for a me
 life partnership.</p>
 <div class="col-md-6 d-flex justify-content-center align-items-center">
 
-                <img src="Images/cc3.png" alt="About Us Image" class="img-fluid" style={{maxheight: "800px", maxwidth: "100%"}}/>
+                <img src="Images/cc3.png" alt="About Us Image" class="img-fluid" style={{height: "200px", maxWidth: "100%",alignItems:"center"}}/>
             </div>
 <h2 style={{paddingTop:"100px",paddingLeft:"100px"}}>WHY CONNECTSOULMATE</h2>
 
 <div class="col-md-6 d-flex justify-content-center align-items-center">
-<img src="Images/pp.png" class="img-fluid custom-img" alt="Second Image" style={{paddingLeft:"50px"}}/>
+<img src="Images/pp.png" class="img-fluid custom-img" alt="Second Image" style={{height:"300px",maxwidth:"100%",alignItems:"center"}}/>
             </div>
             <Footer/>
     </div>

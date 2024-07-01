@@ -22,7 +22,7 @@ const Help = () => {
               <label for="message">Message:</label>
               <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary" style={{marginTop:"50px"}}>Send Message</button>
           </form>
         </div>
       </div>

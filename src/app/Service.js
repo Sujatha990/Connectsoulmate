@@ -1,20 +1,21 @@
 import React from 'react'
 import Link from 'next/link'
 import "./service.css";
+import Footer from './Footer';
 
 
 
 const Service = () => {
   return (
     <div>
-    <h1 style={{textAlign:"center"}}>Services</h1>
+    <h1 class="display-4" style={{textAlign:"center",padding: "3rem 1rem"}}>Services</h1>
     <div id="multi-item-carousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/PreWedding.jpg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/PreWedding.jpg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Pre-Wedding Dietician Services</p>
@@ -24,7 +25,7 @@ const Service = () => {
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/NRI.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/NRI.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">NRI Matrimonial Services</p>
@@ -34,7 +35,7 @@ const Service = () => {
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/E1.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/E1.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Elite Matrimonial Services.</p>
@@ -48,7 +49,7 @@ const Service = () => {
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/Remarriage.jpg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/Remarriage.jpg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Re-Marriage Services.</p>
@@ -58,7 +59,7 @@ const Service = () => {
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/Divorcee.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/Divorcee.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Divorcee Matrimony Services.</p>
@@ -68,7 +69,7 @@ const Service = () => {
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/Events.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/Events.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Wedding Events Services.</p>
@@ -82,7 +83,7 @@ const Service = () => {
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/Assisted.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/Assisted.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Assisted Services.</p>
@@ -92,7 +93,7 @@ const Service = () => {
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="Images/Horoscope.jpeg" class="card-img-top" alt="..." style={{width:"400px",height:"400px"}}/>
+            <img src="Images/Horoscope.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text">Horoscope matching services.</p>
@@ -115,6 +116,7 @@ const Service = () => {
 </div>
 
 </div>
+
   )
 }
 
