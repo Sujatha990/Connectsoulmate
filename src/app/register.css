@@ -33,3 +33,27 @@
   form-group{
     margin-bottom: 20px;
   }
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .h3-container {
+    margin-right: 20px;
+  }
+  
+  .arrow-container {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures clicks pass through to select element */
+  }
+  
+  .arrow-wrapper {
+    width: 12px; /* Increase width of the arrow */
+    height: 12px; /* Increase height of the arrow */
+    border-left: 6px solid transparent; /* Adjust size of the arrow */
+    border-right: 6px solid transparent; /* Adjust size of the arrow */
+    border-top: 8px solid #201f1f; /* Arrow color and height */
+  }

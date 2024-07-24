@@ -22,15 +22,6 @@ some may avoid discussing.       </p>
 welcoming second marriage matrimonial service, catering to both Resident Indians and NRIs in India
 and overseas. We acknowledge the sensitivities of this segment and strive to offer a genuine and
 considerate platform for those seeking a new chance at companionship.</p> 
-            
-       
-       
-      
-       
-            
-              
-            
-            
           
           </div>
         </div>

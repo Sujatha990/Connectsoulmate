@@ -1,3 +1,4 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
@@ -20,8 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body class={inter.className}>
-      <NavBar/>
-      <NavBar2/>
+      
         {children}
         
       </body>

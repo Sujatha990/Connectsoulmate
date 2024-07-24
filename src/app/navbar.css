@@ -13,3 +13,64 @@
     font-size: 30px;
     color: white !important;
 }
+/* navbar.css */
+
+/* Style for the dropdown menu */
+/* navbar.css */
+.navbar-brand .fas.fa-heart {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.nav-item .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+    /* navbar.css */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the parent element */
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 250px; /* Adjust width as needed */
+
+
+}
+
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #343a40;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+
+
+.dropdown-item.btn.btn-link:hover {
+    text-decoration: underline;
+}
+
+.nav-item {
+    position: relative; /* Ensure relative positioning for absolute child */
+}
+/* navbar.css */
+.user-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #0bb5ba; /* Example color for the circle */
+    text-align: center;
+    line-height: 36px; /* Center the icon vertically */
+    margin-right: 0.5rem; /* Adjust spacing as needed */
+    font-size: 1.5rem; /* Adjust size of the initial */
+    color: #fff; /* Text color */
+  }
+  
+
+  

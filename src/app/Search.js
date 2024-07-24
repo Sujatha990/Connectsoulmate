@@ -2,77 +2,53 @@
 import React from 'react'
 import "./search.css";
 import { useState } from 'react';
+import Link from 'next/link';
+import Regularsearch from './Regularsearch';
+import AdvanceSearch from './AdvanceSearch';
+import Soulmatesearch from './Soulmatesearch';
+import Keywordsearch from './Keywordsearch';
+import Searchbyid from './Searchbyid';
+import Whoisonline from './Whoisonline';
 
 function Search() {
   const [selectedOption, setSelectedOption] = useState('regular');
 
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
+
+
   return (
-    <div className="container mt-5" style={{maxwidth: "600px",
-      margin:" 0 auto",
+    <div className="container mt-5" style={{
+      maxwidth: "600px",
+      margin: " 0 auto",
       borderrradius: "5px",
-      padding: "20px"}}>
+      padding: "20px"
+    }}>
       <h2>Search</h2>
       <div className="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons">
-        <label className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="regularSearchOption"
-            autoComplete="off"
-            checked={selectedOption === 'regular'}
-            onChange={() => setSelectedOption('regular')}
-          /> Regular Search
-        </label>
-        <label className={`btn btn-primary ${selectedOption === 'advanced' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="advancedSearchOption"
-            autoComplete="off"
-            checked={selectedOption === 'advanced'}
-            onChange={() => setSelectedOption('advanced')}
-          /> Advanced Search
-        </label>
-        <label className={`btn btn-primary ${selectedOption === 'soulmate' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="soulmateSearchOption"
-            autoComplete="off"
-            checked={selectedOption === 'soulmate'}
-            onChange={() => setSelectedOption('soulmate')}
-          /> Soulmate Search
-        </label>
-        <label className={`btn btn-primary ${selectedOption === 'keyword' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="keywordSearchOption"
-            autoComplete="off"
-            checked={selectedOption === 'keyword'}
-            onChange={() => setSelectedOption('keyword')}
-          /> Keyword Search
-        </label>
-        <label className={`btn btn-primary ${selectedOption === 'id' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="searchByIdOption"
-            autoComplete="off"
-            checked={selectedOption === 'id'}
-            onChange={() => setSelectedOption('id')}
-          /> Search by ID
-        </label>
-        <label className={`btn btn-primary ${selectedOption === 'online' ? 'active' : ''}`}>
-          <input
-            type="radio"
-            name="searchOptions"
-            id="whoIsOnlineOption"
-            autoComplete="off"
-            checked={selectedOption === 'online'}
-            onChange={() => setSelectedOption('online')}
-          /> Who is Online
-        </label>
+        <Link href="/regularsearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('regular')}>
+          Regular Search
+        </Link>
+        <Link href="/advancesearch" className={`btn btn-primary ${selectedOption === 'advance' ? 'active' : ''}`}  onClick={() => handleOptionChange('advance')}>
+          Advanced Search
+        </Link>
+        <Link href="/soulmatesearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`}  onClick={() => handleOptionChange('soulmate')}>
+          Soulmate Search
+        </Link>
+        <Link href="/keywordsearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('keyword')}>
+          keyword Search
+        </Link>
+
+        <Link href="/searchbyid" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('id')}>
+          Search by Id
+        </Link>
+        <Link href="/whoisonline" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('online')}>
+          Who is Online
+        </Link>
+
+
       </div>
 
       <form className="mt-4">
@@ -204,7 +180,7 @@ function Search() {
               </select>
             </div>
 
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
+            <Link href="/regularsearch" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</Link>
           </div>
         )}
 
@@ -454,13 +430,13 @@ function Search() {
                 <option value="Online right now">Online right now</option>
               </select>
             </div>
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
+            <Link href="/advancesearch" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</Link>
           </div>
         )}
 
         {selectedOption === 'soulmate' && (
           <div id="soulmateSearch" className="search-section">
-             <div className="form-group">
+            <div className="form-group">
               <label htmlFor="regularGender">Gender</label>
               <select className="form-control" id="regularGender">
                 <option value="female">Female</option>
@@ -585,8 +561,8 @@ function Search() {
               </select>
             </div>
 
-      
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
+
+            <Link href="/soulmatesearch" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</Link>
           </div>
         )}
 
@@ -596,7 +572,7 @@ function Search() {
               <label htmlFor="keyword">Keyword</label>
               <input type="text" className="form-control" id="keyword" placeholder="Enter keyword" />
             </div>
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
+            <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</button>
           </div>
         )}
 
@@ -606,14 +582,14 @@ function Search() {
               <label htmlFor="userId">User ID</label>
               <input type="text" className="form-control" id="userId" placeholder="Enter user ID" />
             </div>
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Search</button>
+            <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</button>
           </div>
         )}
 
         {selectedOption === 'online' && (
           <div id="whoIsOnline" className="search-section">
             <p>Showing all users who are currently online.</p>
-            <button type="submit" className="btn btn-primary" style={{marginTop:"30px"}}>Refresh</button>
+            <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Refresh</button>
           </div>
         )}
       </form>

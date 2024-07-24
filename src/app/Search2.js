@@ -1,40 +1,81 @@
-import React from 'react'
-import "./search2.css";
-import Help from './Help';
+// NavBar.jsx
+"use client"
+import React, { useState } from 'react';
+import Link from 'next/link';
 
+const NavBar = ({ isLoggedIn, username }) => {
+  const [showDropdown, setShowDropdown] = useState(false);
 
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
+  const handleLogout = () => {
+    alert('Logout clicked');
+    // Implement logout functionality here
+  };
 
-      import Link from 'next/link';
-import "./globals.css";
-
-const Search2 = () => {
   return (
-    <div className="container about-us">
-      <div className="row">
-        <div className="col-md-6 about-us-description">
-          <div>
-            <h2 className="display-4">About Us</h2>
-            <p>
-              In the rich tapestry of Indian culture, the traditional practice of arranged marriage holds a significant place. For generations, parents have taken on the important task of seeking ideal life partners for their children, collaborating with relatives, marriage bureaus, friends, and various intermediaries. However, the landscape has evolved dramatically in contemporary times. Presently, individuals seeking marriage wish to establish a genuine connection with their future partners, aiming to comprehensively understand and resonate with them before embarking on a lifelong journey together. This shift has sparked a paradigm change, placing Matrimonial Sites in India at the forefront of everyone's attention.
-            </p>
-            <Link href="/about1" className="btn btn-primary">More</Link>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <img src="Images/AG.jpg" alt="About Us Image" style={{height:"400px",width:"500px"}} />
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className="container-fluid">
+        <Link href="/" className="navbar-brand">
+          <i className="fas fa-heart text-danger me-1"></i> ConnectSoulmate
+        </Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link href="/register" className="nav-link">
+                <i className="fas fa-user-plus me-1"></i> Register
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/help" className="nav-link">
+                <i className="fas fa-question-circle me-1"></i> Help
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/search" className="nav-link">
+                <i className="fas fa-search me-1"></i> Search
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/search2" className="nav-link">
+                <i className="fas fa-search me-1"></i> Search2
+              </Link>
+            </li>
+            {isLoggedIn ? (
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleDropdown}>
+                  <i className="fas fa-user me-1"></i> {username}
+                </a>
+                <ul className={`dropdown-menu dropdown-menu-end ${showDropdown ? 'show' : ''}`}>
+                  <li>
+                    <p className="dropdown-item mb-0">
+                      <i className="fas fa-user me-1"></i> Logged in as: {username}
+                    </p>
+                  </li>
+                  <li>
+                    <Link href="/home" className="dropdown-item" onClick={handleLogout}>
+                      <i className="fas fa-sign-out-alt me-1"></i> Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <Link href="/login1" className="nav-link">
+                  <i className="fas fa-sign-in-alt me-1"></i> Login
+                </Link>
+              </li>
+            )}
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
-};
+}
 
-
-  
-   
-    
-    
-
-  
-
-export default Search2
+export default NavBar;
