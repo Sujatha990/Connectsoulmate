@@ -63,13 +63,16 @@ function Search() {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="regularAge">Age</label>
-              <input type="number" className="form-control" id="regularAge" placeholder="Enter age" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularHeight">Height</label>
-              <input type="text" className="form-control" id="regularHeight" placeholder="Enter height range" />
-            </div>
+                <label htmlFor="rangeInput"> Age with Min and Max Values (comma separated)</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="rangeInput"
+                  placeholder="enter the Age in between values, e.g., 10, 100"
+                  required // Ensures the field is required
+                />
+              </div>
+           
             <div className="form-group">
               <label htmlFor="regularMaritalStatus">Marital Status</label>
               <select className="form-control" id="regularMaritalStatus">
@@ -95,14 +98,7 @@ function Search() {
                 <option value="other">Other</option>
               </select>
             </div>
-            <div className="form-group">
-              <label htmlFor="regularMotherTongue">Mother Tongue</label>
-              <select className="form-control" id="regularMotherTongue">
-                <option value="">Select Mother Tongue</option>
-                <option value="kannada">Kannada</option>
-                <option value="telugu">Telugu</option>
-              </select>
-            </div>
+            
             <div className="form-group">
               <label htmlFor="regularCaste">Caste</label>
               <select className="form-control" id="regularCaste">
@@ -133,30 +129,7 @@ function Search() {
                 <option value="Telangana">Telangana</option>
               </select>
             </div>
-            <div className="form-group">
-              <label htmlFor="regularDistrictCity">District</label>
-              <select className="form-control" id="regularDistrictCity">
-                <option value="">Select district</option>
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysuru">Mysuru</option>
-                <option value="Mangaluru">Mangaluru</option>
-                <option value="Hubballi">Hubballi</option>
-                <option value="Belagavi">Belagavi</option>
-                <option value="Shivamogga">Shivamogga</option>
-                <option value="Visakhapatnam">Visakhapatnam</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Guntur">Guntur</option>
-                <option value="Nellore">Nellore</option>
-                <option value="Kurnool">Kurnool</option>
-                <option value="Tirupati">Tirupati</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Warangal">Warangal</option>
-                <option value="Nizamabad">Nizamabad</option>
-                <option value="Khammam">Khammam</option>
-                <option value="Karimnagar">Karimnagar</option>
-                <option value="Nalgonda">Nalgonda</option>
-              </select>
-            </div>
+           
             <div className="form-group">
               <label htmlFor="regularEducation">Education</label>
               <select className="form-control" id="regularEducation">
@@ -177,6 +150,17 @@ function Search() {
                 <option value="B.Tech from JNTUH">B.Tech from JNTUH (Telangana)</option>
                 <option value="MBBS from KNRUHS">MBBS from KNRUHS (Telangana)</option>
                 <option value="MBA from Osmania University">MBA from Osmania University</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="employedIn">Employed In</label>
+              <select className="form-control" id="employedIn">
+                <option value="">Select employment sector</option>
+                <option value="Government">Government</option>
+                <option value="Private">Private</option>
+                <option value="Business">Business</option>
+                <option value="Self Employed">Self Employed</option>
+                <option value="Not Employed">Not Employed</option>
               </select>
             </div>
 
@@ -596,22 +580,5 @@ function Search() {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Search;

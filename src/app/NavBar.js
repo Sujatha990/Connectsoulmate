@@ -81,11 +81,7 @@ const NavBar = ({ isLoggedIn, username }) => {
                                     <i className="fas fa-search"></i> Search
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link href="/search2" className="nav-link text-white">
-                                    <i className="fas fa-search"></i> Search2
-                                </Link>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>

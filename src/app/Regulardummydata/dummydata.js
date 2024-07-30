@@ -6,7 +6,9 @@ const dummydata = [
       religion: 'hinduism',
       caste: 'Vokkaliga',
       state: 'Karnataka',
-      education: 'Undergraduate'
+      education: 'Undergraduate',
+      employedIn:'bussiness',
+
     },
     {
       gender: 'male',
@@ -15,7 +17,10 @@ const dummydata = [
       religion: 'islam',
       caste: 'Reddy',
       state: 'Andhra Pradesh',
-      education: 'Postgraduate'
+      education: 'Postgraduate',
+      employedIn:'private',
+
+
     },
     {
       gender: 'male',
@@ -24,7 +29,9 @@ const dummydata = [
       religion: 'christianity',
       caste: 'Brahmin',
       state: 'Telangana',
-      education: 'Higher Secondary'
+      education: 'Higher Secondary',
+      employedIn:'software',
+
     },
     // Add more objects as needed
   ];

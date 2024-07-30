@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Keyworddisplay.css";
+import "./Searchbydisplay.css";
 
 const Keywordsearchdisplay = ({ storedData }) => {
   return (
@@ -8,7 +8,7 @@ const Keywordsearchdisplay = ({ storedData }) => {
         <div key={index} className="profile-card">
           <div className="profile-header">Profile {index + 1}</div>
           <div className="profile-detail">
-            <strong>Keyword:</strong> <span>{data.keyword}</span>
+            <strong>name:</strong> <span>{data.name}</span>
           </div>
         </div>
       ))}

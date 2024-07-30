@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import "./search.css";
 import dummydata from './Searchbyiddummydata/dummydata';
+import Searchbyiddisplay from './Searchbyiddisplay'
 
 
 const Searchbyid = () => {
@@ -21,11 +22,17 @@ const Searchbyid = () => {
     e.preventDefault();
 
     const updatedData = {
-      id: formData.id
-    };
+      id: storedData.length + 1,
+      name: formData.name
+  };
 
-    const updatedStoredData = [...storedData, updatedData];
-    setStoredData(updatedStoredData);
+  if (Array.isArray(storedData)) {
+      const updatedStoredData = [...storedData, updatedData];
+      setStoredData(updatedStoredData);
+  } else {
+      console.error('storedData is not an array');
+  }
+
 
     // Clear the form fields after submission (optional)
     setFormData({
@@ -38,6 +45,9 @@ const Searchbyid = () => {
   return (
     <div className="container mt-5" style={{ maxWidth: "600px", margin: "0 auto", borderRadius: "5px", padding: "20px" }}>
       <h2>Search</h2>
+      {showSearchResults ? (
+                <Searchbyiddisplay storedData={storedData} /> // Corrected component name
+            ) : (
 
 
       <div>
@@ -68,6 +78,7 @@ const Searchbyid = () => {
         </form>
 
       </div>
+            )}
     </div>
 
   )

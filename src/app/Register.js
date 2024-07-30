@@ -48,6 +48,8 @@ const Register = () => {
   const [error, setError] = useState('');
   const [storedData, setStoredData] = useState(dummydata);
   const [showRegisterSuccess, setShowRegisterSuccess] = useState(false);
+  const [viewDetails, setViewDetails] = useState(false);  // New state for viewing details
+
 
   const totalSteps = 7;
 
@@ -90,9 +92,11 @@ const Register = () => {
       setFormData({
         profile: '',
         firstName: '',
+        surName: '',
         age: '',
         address: '',
         city: '',
+        pincode:'',
         phoneNumber: '',
         email: '',
         password: '',
@@ -132,6 +136,19 @@ const Register = () => {
     setCurrentStep(currentStep - 1);
   };
 
+  const toggleViewDetails = () => {
+    setViewDetails(!viewDetails);
+
+  };
+  const formatFormData = (data) => {
+    return Object.entries(data).map(([key, value]) => {
+      if (key === 'photo' && value) {
+        return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value.name}`;
+      }
+      return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+    }).join('\n');
+  };
+
   return (
 
     <section className="h-100 bg-dark">
@@ -153,14 +170,11 @@ const Register = () => {
                     {currentStep === 1 && (
                       <>
                         <div className="flex-container">
-                          <h3 className="mb-5 text-uppercase display-4" style={{ fontSize: "30px", color: "red", marginBottom: "10px" }}>
-                            Register /
-                          </h3>
-                          <Link className="mb-5 text-uppercase display-4" style={{ textDecoration: "none", fontSize: "30px", color: "red" }} href="/uploaddocument">
-                            Upload Document
-                          </Link>
+                          <h1 className="mb-5 text-uppercase display-4">
+                            Register
+                          </h1>
+
                         </div>
-                        <h2 className="text-center mb-4">Find your perfect match</h2>
                         {error && <div className="alert alert-danger">{error}</div>}
                         <form onSubmit={handleRegister}>
                           <div className="form-group mb-3 ">
@@ -208,6 +222,21 @@ const Register = () => {
                           </div>
 
                           <div className="form-group mb-3">
+                            <label htmlFor="surName">Sur Name</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="surName"
+                              name="surName"
+                              value={formData.surName}
+                              onChange={handleChange}
+                              placeholder="Enter sur name"
+                              required
+                            />
+                          </div>
+
+
+                          <div className="form-group mb-3">
                             <label htmlFor="age">Age</label>
                             <input
                               type="number"
@@ -245,6 +274,22 @@ const Register = () => {
                               value={formData.city}
                               onChange={handleChange}
                               placeholder="Enter city"
+                              required
+                            />
+                          </div>
+
+                          <div className="form-group mb-3">
+                            <label htmlFor="pincode">Pincode</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="pincode"
+                              name="pincode"
+                              value={formData.pincode}
+                              onChange={handleChange}
+                              placeholder="Enter pincode"
+                              pattern="\d{6}"
+                              title="Pincode must be a 6-digit number"
                               required
                             />
                           </div>
@@ -555,38 +600,38 @@ const Register = () => {
                             <label htmlFor="familyValues">Family Values</label>
                             <div className="position-relative">
 
-                            <select
-                              className="form-control form-control-arrow"
-                              id="familyValues"
-                              name="familyValues"
-                              value={formData.familyValues}
-                              onChange={handleChange}
-                            >
-                              <option value="">Select Family Values</option>
-                              <option value="Orthodox">Orthodox</option>
-                              <option value="Traditional">Traditional</option>
-                              <option value="Moderate">Moderate</option>
-                              <option value="Liberal">Liberal</option>
-                            </select>
-                            <div className="arrow-container">
-                              <div className="arrow-wrapper">
-                                <div className="arrow"></div>
+                              <select
+                                className="form-control form-control-arrow"
+                                id="familyValues"
+                                name="familyValues"
+                                value={formData.familyValues}
+                                onChange={handleChange}
+                              >
+                                <option value="">Select Family Values</option>
+                                <option value="Orthodox">Orthodox</option>
+                                <option value="Traditional">Traditional</option>
+                                <option value="Moderate">Moderate</option>
+                                <option value="Liberal">Liberal</option>
+                              </select>
+                              <div className="arrow-container">
+                                <div className="arrow-wrapper">
+                                  <div className="arrow"></div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="form-group" style={{ marginBottom: '20px' }}>
-                          <label htmlFor="disability">Disability (if any)</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="disability"
-                            name="disability"
-                            value={formData.disability}
-                            onChange={handleChange}
-                            placeholder="Enter disability details"
-                          />
-                        </div>
+                          <div className="form-group" style={{ marginBottom: '20px' }}>
+                            <label htmlFor="disability">Disability (if any)</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="disability"
+                              name="disability"
+                              value={formData.disability}
+                              onChange={handleChange}
+                              placeholder="Enter disability details"
+                            />
+                          </div>
                         </div>
                       </>
                     )}
@@ -623,26 +668,26 @@ const Register = () => {
                           <label htmlFor="employedIn">Employed In</label>
                           <div className="position-relative">
 
-                          <select
-                            className="form-control form-control-arrow"
-                            id="employedIn"
-                            name="employedIn"
-                            value={formData.employedIn}
-                            onChange={handleChange}
-                          >
-                            <option value="">Select Employment</option>
-                            <option value="Government">Government</option>
-                            <option value="Private">Private</option>
-                            <option value="Business">Business</option>
-                            <option value="Self-employed">Self-employed</option>
-                            <option value="Not working">Not working</option>
-                          </select>
-                          <div className="arrow-container">
-      <div className="arrow-wrapper">
-        <div className="arrow"></div>
-      </div>
-    </div>
-  </div>
+                            <select
+                              className="form-control form-control-arrow"
+                              id="employedIn"
+                              name="employedIn"
+                              value={formData.employedIn}
+                              onChange={handleChange}
+                            >
+                              <option value="">Select Employment</option>
+                              <option value="Government">Government</option>
+                              <option value="Private">Private</option>
+                              <option value="Business">Business</option>
+                              <option value="Self-employed">Self-employed</option>
+                              <option value="Not working">Not working</option>
+                            </select>
+                            <div className="arrow-container">
+                              <div className="arrow-wrapper">
+                                <div className="arrow"></div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div className="form-group" style={{ marginBottom: '20px' }}>
                           <label htmlFor="occupation">Occupation</label>
@@ -712,11 +757,16 @@ const Register = () => {
                             checked={acceptedTerms}
                           />
                           <label htmlFor="termsCheckbox" className="ms-2">
-                            I accept the <Link href="Images/Terms&Condition.pdf" target="_blank" onClick={handleViewTerms}>Terms and Conditions</Link>
-                          </label>
+                            I accept the <Link href="Images/Terms&Condition.pdf" target="_blank" onClick={handleViewTerms}>Terms and Conditions</Link><br />
+                          </label><br />
+                          <p>(or)</p>
+                          <Link className="mb-5 text-uppercase display-4" style={{ textDecoration: "none", fontSize: "30px", color: "red" }} href="/uploaddocument">
+                            Upload Biodata
+                          </Link>
                         </div>
                       </>
                     )}
+
                     <div className="d-flex justify-content-between align-items-center mt-4">
                       {currentStep > 1 && (
                         <button type="button" className="btn btn-warning btn-lg ms-2" onClick={prevStep}>
@@ -729,11 +779,22 @@ const Register = () => {
                         </button>
                       )}
                       {currentStep === totalSteps && (
+                        <>
+                         <button type="button" className="view-details-button ms-2" onClick={toggleViewDetails}>
+                            {viewDetails ? "Hide Details" : "View Details"}
+                          </button>
                         <button type="button" className="btn btn-warning btn-lg ms-2">
                           Submit
                         </button>
+                        </>
                       )}
                     </div>
+                    {viewDetails && (
+                      <div className="details-container mt-4">
+                        <h3 className="details-header">Form Details</h3>
+                        <pre className="details-content">{JSON.stringify(formData, null, 2)}</pre>
+                      </div>
+                    )}
 
                   </div>
                 </div>

@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { validateCredentials } from './ValidationUtlis';
 import dummyData, { addNewUser } from './data/dummyData';
 import Home1 from './Home1';
-import NavBar from './NavBar'; // Import NavBar component
 import NavBar2 from './NavBar2';
+import NavBar3 from './NavBar3';
 
 const Login1 = () => {
   const [email, setEmail] = useState('');
@@ -48,7 +48,7 @@ const Login1 = () => {
   if (isLoggedIn) {
     return (
       <>
-        <NavBar isLoggedIn={isLoggedIn} username={username} /> {/* Pass isLoggedIn and username to NavBar */}
+        <NavBar3 isLoggedIn={isLoggedIn} username={username} /> {/* Pass isLoggedIn and username to NavBar */}
         <NavBar2/>
         <Home1 />
       </>

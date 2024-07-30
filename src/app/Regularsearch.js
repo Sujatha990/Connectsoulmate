@@ -14,7 +14,8 @@ const Regularsearch = () => {
     religion: '',
     caste: '',
     state: '',
-    education: ''
+    education: '',
+    employedIn:''
   });
   const [storedData, setStoredData] = useState(dummydata);
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -38,7 +39,8 @@ const Regularsearch = () => {
       religion: formData.religion,
       caste: formData.caste,
       state: formData.state,
-      education: formData.education
+      education: formData.education,
+      employedIn:formData.employedIn
     };
 
     const updatedStoredData = [...storedData, updatedData];
@@ -52,7 +54,8 @@ const Regularsearch = () => {
       religion: '',
       caste: '',
       state: '',
-      education: ''
+      education: '',
+      employedIn:''
     });
 
     // Show search results
@@ -62,6 +65,9 @@ const Regularsearch = () => {
   return (
     <div className="container mt-5" style={{ maxWidth: "600px", margin: "0 auto", borderRadius: "5px", padding: "20px" }}>
       <h2>Search</h2>
+      {showSearchResults ? (
+        <Regularsearchdisplaypage storedData={storedData} />
+      ) : (
 
 
       <div>
@@ -172,13 +178,24 @@ const Regularsearch = () => {
                   <option value="MBA from Osmania University">MBA from Osmania University</option>
                 </select>
               </div>
+              <div className="form-group">
+              <label htmlFor="employedIn">Employed In</label>
+              <select className="form-control" id="employedIn">
+                <option value="">Select employment sector</option>
+                <option value="Government">Government</option>
+                <option value="Private">Private</option>
+                <option value="Business">Business</option>
+                <option value="Self Employed">Self Employed</option>
+                <option value="Not Employed">Not Employed</option>
+              </select>
+            </div>
 
               <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</button>
             </div>
           )}
         </form>
       </div>
-
+      )}
     </div>
   );
 };

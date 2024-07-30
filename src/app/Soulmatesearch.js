@@ -67,7 +67,9 @@ const Soulmatesearch = () => {
         <div className="container mt-5" style={{ maxWidth: "600px", margin: "0 auto", borderRadius: "5px", padding: "20px" }}>
             <h2>Search</h2>
 
-          
+            {showSearchResults ? (
+                <Soulmateseachdisplay storedData={storedData} />
+            ) : (
                 <div>
                     <div className="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons">
                         <label className={`btn btn-primary ${selectedOption === 'soulmate' ? 'active' : ''}`}>
@@ -206,7 +208,7 @@ const Soulmatesearch = () => {
                     </form>
 
                 </div>
-            
+            )}
         </div>
     );
 };
