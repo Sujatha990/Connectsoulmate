@@ -1,5 +1,5 @@
 import React from 'react'
-import Event from '.'
+import Event from '../Event'
 
 const page = () => {
   return (
