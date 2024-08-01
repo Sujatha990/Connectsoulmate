@@ -22,7 +22,7 @@ const Horoscope = () => {
                 <p><strong>3. Personalized Guidance:</strong> Our astrologers offer personalized consultations, guiding you through the nuances of horoscope compatibility and addressing any queries you may have.</p>
                 <p><strong>4. In-Depth Analysis:</strong> From Kundli Milan to Guna matching, we delve deep into astrological aspects to offer comprehensive insights into your cosmic connection.</p>
                 <p><strong>5. Holistic Matchmaking:</strong> Combine the wisdom of astrological compatibility with modern preferences, ensuring a well-rounded match that resonates on multiple levels.</p>
-                <p><strong>6. Enhanced Understanding:</strong> Gain a deeper understanding of your partner's traits, tendencies, and potential challenges through horoscope insights.</p>
+                <p><strong>6. Enhanced Understanding:</strong> Gain a deeper understanding of your partner&apos;s traits, tendencies, and potential challenges through horoscope insights.</p>
               </div>
             </div>
           </div>
