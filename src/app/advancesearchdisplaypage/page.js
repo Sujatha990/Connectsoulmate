@@ -1,11 +1,12 @@
-import React from 'react'
-import Advanceserchdisplaypage from '../Advanceserchdisplaypage'
-const page = () => {
+import React from 'react';
+import Advanceserchdisplaypage from '../Advanceserchdisplaypage';
+
+const Page = () => {
   return (
     <div>
-      <Advanceserchdisplaypage/>
+      <Advanceserchdisplaypage />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
