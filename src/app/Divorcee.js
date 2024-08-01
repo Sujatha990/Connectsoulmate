@@ -11,13 +11,13 @@ const Divorcee = () => {
             <div>
               <h2 style={{ paddingLeft: '50px' }}>Divorcee Matrimony Services</h2>
               <p style={{ paddingLeft: '50px' }}>
-                Divorce is a part of life's journey, and we understand the complexities and emotions that come with it.
+                Divorce is a part of life&#39;s journey, and we understand the complexities and emotions that come with it.
                 Our platform offers a supportive and understanding community for divorcees to connect, interact, and
                 potentially find their perfect match. We believe that everyone deserves happiness and a chance to
                 find love again.
               </p>
               <p style={{ paddingLeft: '50px' }}>
-                We believe that love knows no boundaries and that it's never too late to find companionship again.
+                We believe that love knows no boundaries and that it&#39;s never too late to find companionship again.
                 Our platform is a bridge that connects individuals who share similar life experiences, making the
                 journey towards a new relationship easier and more meaningful.
               </p>

@@ -1,5 +1,4 @@
-// Login1.jsx
-"use client"
+"use client";
 import { useState } from 'react';
 import { validateCredentials } from './ValidationUtlis';
 import dummyData, { addNewUser } from './data/dummyData';
@@ -90,7 +89,7 @@ const Login1 = () => {
         </div>
 
         <div className="divider d-flex align-items-center my-4">
-        <hr className="text-center flex-grow-1" />
+          <hr className="text-center flex-grow-1" />
           <p className="text-center fw-bold mx-3 mb-0">Or</p>
           <hr className="text-center flex-grow-1" />
         </div>
@@ -149,7 +148,7 @@ const Login1 = () => {
               Login
             </button>
             <p className="small fw-bold mt-2 pt-1 mb-0">
-              Don't have an account? <a href="#!" className="link-danger">Register</a>
+              Don&apos;t have an account? <a href="#!" className="link-danger">Register</a>
             </p>
           </div>
         </form>

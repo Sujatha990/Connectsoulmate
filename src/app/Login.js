@@ -29,8 +29,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // Handle form submission
-    // Example: Send data to the server
     try {
       // await Authservice.login({ name, email, password });
       // Handle success
@@ -52,11 +50,11 @@ const Login = () => {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
             <Image
-              src="/Images/NRI.jpeg" // Ensure this path is correct and the image is in the public folder
+              src="/Images/NRI.jpeg"
               alt="Sample image"
-              width={500} // Set the width of the image
-              height={300} // Set the height of the image
-              layout="responsive" // Adjust the layout as needed
+              width={500}
+              height={300}
+              layout="responsive"
             />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -69,6 +67,7 @@ const Login = () => {
                   value={name} 
                   onChange={(e) => setName(e.target.value)} 
                   placeholder="Name" 
+                  aria-label="Name"
                 />
               </div>
               <div className="form-outline mb-4">
@@ -79,6 +78,7 @@ const Login = () => {
                   value={email} 
                   onChange={(e) => setEmail(e.target.value)} 
                   placeholder="Email" 
+                  aria-label="Email"
                 />
               </div>
               <div className="form-outline mb-4">
@@ -89,6 +89,7 @@ const Login = () => {
                   value={password} 
                   onChange={(e) => setPassword(e.target.value)} 
                   placeholder="Password" 
+                  aria-label="Password"
                 />
               </div>
               <button type="submit" className="btn btn-primary btn-lg">Login</button>
@@ -114,7 +115,7 @@ const Login = () => {
             )}
 
             <p className="small fw-bold mt-2 pt-1 mb-0">
-              Don't have an account? <a href="#!" className="link-danger">Register</a>
+              Don&apos;t have an account? <a href="#!" className="link-danger">Register</a>
             </p>
           </div>
         </div>

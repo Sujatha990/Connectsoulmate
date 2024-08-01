@@ -15,7 +15,7 @@ const Remarriage = () => {
                 <p style={{ paddingLeft: "50px" }}>
                   Marriages can face challenges and end due to a variety of reasons such as communication breakdown,
                   difficulty in adjusting, lack of empathy, domestic conflicts, and other unfortunate factors. However, the
-                  end of a marriage doesn't signify the end of your life. There's always an opportunity for a fresh
+                  end of a marriage doesn&apos;t signify the end of your life. There&apos;s always an opportunity for a fresh
                   beginning and the exploration of new horizons. Remarriage, or a second marriage, is a subject that
                   some may avoid discussing.
                 </p>
