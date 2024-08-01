@@ -10,14 +10,14 @@ const Remarriage = () => {
       <div className="row">
         <div className="col-md-6 about-us-description">
           <div>
-            <h2>Re-Marriage Services</h2>
-            <p>
+            <h2 style={{paddingLeft:"50px"}}>Re-Marriage Services</h2>
+            <p style={{paddingLeft:"50px"}}>
             Marriages can face challenges and end due to a variety of reasons such as communication breakdown,
 difficulty in adjusting, lack of empathy, domestic conflicts, and other unfortunate factors. However, the
 end of a marriage doesn't signify the end of your life. There's always an opportunity for a fresh
 beginning and the exploration of new horizons. Remarriage, or a second marriage, is a subject that
 some may avoid discussing.       </p>
-            <p>
+            <p style={{paddingLeft:"50px"}}>
             Understanding the unique needs of individuals in this phase of life, we proudly provide a sincere and
 welcoming second marriage matrimonial service, catering to both Resident Indians and NRIs in India
 and overseas. We acknowledge the sensitivities of this segment and strive to offer a genuine and

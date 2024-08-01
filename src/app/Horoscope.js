@@ -9,12 +9,13 @@ const Horoscope = () => {
       <div className="row">
         <div className="col-md-6 about-us-description">
           <div>
-            <h2>Horoscope matching services </h2>
-            <p>Step into a realm where tradition meets insight with our Horoscope Matching Services. Delve into the  ancient art of astrological compatibility to ensure a harmonious and blissful journey towards  matrimony.
+            <h2 style={{paddingLeft:"50px"}}>Horoscope matching services </h2>
+            <p style={{paddingLeft:"50px"}}>Step into a realm where tradition meets insight with our Horoscope Matching Services. Delve into the  ancient art of astrological compatibility to ensure a harmonious and blissful journey towards  matrimony.
                     </p>
                      
             
-       <h2>Our Range of Services:  </h2>
+       <h2 style={{paddingLeft:"50px"}}>Our Range of Services:  </h2>
+       <div style={{paddingLeft:"50px"}}>
        
       <p>1. Astrological Expertise: Our seasoned astrologers meticulously analyse horoscopes to unveil  celestial alignments that influence your relationship compatibility.  </p>
 <p>2. Cosmic Harmony: Discover the alignment of stars, planets, and cosmic energies that impact  your potential union. Our services provide insights into aspects like emotional compatibility,  financial stability, and familial harmony. 
@@ -25,7 +26,7 @@ const Horoscope = () => {
 <p>5. Holistic Matchmaking: Combine the wisdom of astrological compatibility with modern  preferences, ensuring a well-rounded match that resonates on multiple levels. 6. Enhanced Understanding: Gain a deeper understanding of your partner's traits, tendencies,  and potential challenges through horoscope insights. 
   
   </p>
-
+</div>
 
  </div>
         </div>

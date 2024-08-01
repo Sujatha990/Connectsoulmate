@@ -9,8 +9,8 @@ const Elite = () => {
       <div className="row">
         <div className="col-md-6 about-us-description">
           <div>
-            <h2>Elite Matrimonial Services</h2>
-            <p>
+            <h2 style={{paddingLeft:"50px"}}>Elite Matrimonial Services</h2>
+            <p style={{paddingLeft:"50px"}}>
             At Connectsoulmate, we understand the unique needs of elite circles – business magnates, diplomats,
 celebrities, and other accomplished individuals who seek a partner that matches their stature and
 values. With an unwavering commitment to excellence, we curate matches that go beyond

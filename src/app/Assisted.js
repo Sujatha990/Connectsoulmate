@@ -10,8 +10,8 @@ const Assisted = () => {
       <div className="row">
         <div className="col-md-6 about-us-description">
           <div>
-            <h2>Assisted Services</h2>
-            <p>
+            <h2 style={{paddingLeft:"50px"}}>Assisted Services</h2>
+            <p style={{paddingLeft:"50px"}}>
             This innovative approach has facilitated countless members in uncovering their ideal life partners.
 With a vast network of Relationship Managers spread across India, we ensure that the service is
 offered in your preferred language. Your journey will be guided by a dedicated Relationship Manager

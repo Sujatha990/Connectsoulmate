@@ -9,19 +9,19 @@ const Event = () => {
       <div className="row">
         <div className="col-md-6 about-us-description">
           <div>
-            <h2>Wedding Events Services</h2>
-            <p>
+            <h2 style={{paddingLeft:"50px"}}>Wedding Events Services</h2>
+            <p style={{paddingLeft:"50px"}}>
             Weddings in India are renowned for their extensive preparations and bustling activities. Families often
 invest months in meticulously organizing the various ceremonies that constitute a wedding event.
 These celebrations can span around a week, presenting a significant organizational challenge,
 particularly if there is limited additional assistance available. This is the precise scenario where we
 consider it our duty to step in and offer our support.          </p>
-            <p>
+            <p style={{paddingLeft:"50px"}}>
             Our dedicated team is committed to turning your vision into reality, ensuring that every detail is
             meticulously planned and flawlessly executed.           </p> 
             
-       <h2>Our Range of Services:</h2>
-       
+       <h2 style={{textAlign:"center",paddingTop:"50px"}}>Our Range of Services:</h2>
+       <div style={{paddingLeft:"50px"}}>
       <p> 1. Wedding Planning: Our experienced planners work closely with you to understand your
 preferences and design a comprehensive wedding plan. From venue selection to theme
 conceptualization, we take care of every aspect to create a seamless and memorable
@@ -53,6 +53,7 @@ breathtaking locations with flawless execution. Whether it's a serene beach, a h
 or a charming vineyard, we bring your dream destination wedding to life.</p>
 <p>11. Personalized Touch: Your wedding is a reflection of your love story. Our team goes the extra
 mile to infuse personal touches that make your celebration uniquely yours.</p>
+</div>
 
  </div>
         </div>
