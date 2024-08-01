@@ -53,7 +53,7 @@ const Event = () => {
                     aspect of your wedding unfolds seamlessly. We manage the schedule, oversee setups, and
                     handle any unexpected situations that may arise.</p>
                   <p><strong>10. Destination Weddings:</strong> We specialize in crafting destination weddings that combine
-                    breathtaking locations with flawless execution. Whether it's a serene beach, a historic castle,
+                    breathtaking locations with flawless execution. Whether it&apos;s a serene beach, a historic castle,
                     or a charming vineyard, we bring your dream destination wedding to life.</p>
                   <p><strong>11. Personalized Touch:</strong> Your wedding is a reflection of your love story. Our team goes the extra
                     mile to infuse personal touches that make your celebration uniquely yours.</p>
