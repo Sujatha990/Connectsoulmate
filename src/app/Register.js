@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { userExists } from './ValidationUtlis';
 import Registerdisplaydata from './Registerdisplaydata';
 import dummydata from './Registerdummydata/dummydata';
+import Image from 'next/image'
+
 
 
 
@@ -158,12 +160,14 @@ const Register = () => {
             <div className="card card-registration my-4">
               <div className="row g-0">
                 <div className="col-xl-6 d-none d-xl-block">
-                  <img
-                    src="Images/GMing.jpg"
-                    alt="Sample"
-                    className="img-fluid"
-                    style={{ maxWidth: "100%", height: "800px", borderRadius: ".25rem" }}
-                  />
+                <Image
+        src="/Images/GMing.jpg" // Adjust the path if necessary
+        alt="Sample"
+        className="img-fluid"
+        width={800} // You should provide the width and height for Next.js Image component
+        height={800} // This should match the dimensions in your style
+        style={{ maxWidth: "100%", height: "800px", borderRadius: ".25rem" }}
+      />
                 </div>
                 <div className="col-xl-6">
                   <div className="card-body p-md-5 text-black">

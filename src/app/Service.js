@@ -1,122 +1,165 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import "./service.css";
-import Footer from './Footer';
-
-
 
 const Service = () => {
   return (
     <div>
-    <h1 class="display-4" style={{textAlign:"center",padding: "3rem 1rem"}}>Services</h1>
-    <div id="multi-item-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/PreWedding.jpg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Pre-Wedding Dietician Services</p>
-              <Link href="/prewedding" class="btn btn-primary">Click for more Detailes</Link>
+      <h1 className="display-4" style={{ textAlign: "center", padding: "3rem 1rem" }}>Services</h1>
+      <div id="multi-item-carousel" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/PreWedding.jpg" // Path relative to public directory
+                    alt="Pre-Wedding Dietician Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Pre-Wedding Dietician Services</p>
+                    <Link href="/prewedding" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/NRI.jpeg"
+                    alt="NRI Matrimonial Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">NRI Matrimonial Services</p>
+                    <Link href="/nri" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/E1.jpeg"
+                    alt="Elite Matrimonial Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Elite Matrimonial Services</p>
+                    <Link href="/elite" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/Remarriage.jpg"
+                    alt="Re-Marriage Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Re-Marriage Services</p>
+                    <Link href="/remarriage" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/Divorcee.jpeg"
+                    alt="Divorcee Matrimony Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Divorcee Matrimony Services</p>
+                    <Link href="/divorcee" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/Events.jpeg"
+                    alt="Wedding Events Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Wedding Events Services</p>
+                    <Link href="/event" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/Assisted.jpeg"
+                    alt="Assisted Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Assisted Services</p>
+                    <Link href="/assisted" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/Horoscope.jpeg"
+                    alt="Horoscope Matching Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Horoscope Matching Services</p>
+                    <Link href="/horoscope" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/NRI.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">NRI Matrimonial Services</p>
-              <Link href="/nri" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/E1.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Elite Matrimonial Services.</p>
-              <Link href="/elite" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/Remarriage.jpg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Re-Marriage Services.</p>
-              <Link href="/remarriage" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/Divorcee.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Divorcee Matrimony Services.</p>
-              <Link href="/divorcee" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/Events.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Wedding Events Services.</p>
-              <Link href="/event" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/Assisted.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Assisted Services.</p>
-              <Link href="/assisted" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Images/Horoscope.jpeg" class="card-img-top" alt="..." style={{width:"600px",height:"400px"}}/>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">Horoscope matching services.</p>
-              <Link href="/horoscope" class="btn btn-primary">Click for more Detailes</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-</div>
-
   )
 }
 
