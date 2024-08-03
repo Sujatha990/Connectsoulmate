@@ -4,7 +4,7 @@ import Keywordsearchdisplay from '../Keywordsearchdisplay'
 const page = () => {
   return (
     <div>
-      <Keywordsearchdisplay/>
+      <Keywordsearchdisplay storedData={[]}/>
     </div>
   )
 }

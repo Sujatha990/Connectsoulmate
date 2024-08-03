@@ -4,7 +4,7 @@ import Regularsearchdisplaypage from '../Regularsearchdisplaypage'
 const page = () => {
   return (
     <div>
-      <Regularsearchdisplaypage/>
+      <Regularsearchdisplaypage storedData={[]}/>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const page = () => {
     <div>
       <NavBar/>
       <NavBar2/>
-      <Soulmateseachdisplay/>
+      <Soulmateseachdisplay storedData={[]}/>
       <Footer/>
     </div>
   )

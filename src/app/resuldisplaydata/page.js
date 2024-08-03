@@ -4,7 +4,7 @@ import Registerdisplaydata from '../Registerdisplaydata'
 const page = () => {
   return (
     <div>
-      <Registerdisplaydata/>
+      <Registerdisplaydata storedData={[]}/>
     </div>
   )
 }
