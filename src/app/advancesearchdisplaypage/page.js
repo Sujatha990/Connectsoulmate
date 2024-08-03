@@ -4,7 +4,11 @@ import Advanceserchdisplaypage from '../Advanceserchdisplaypage';
 const Page = () => {
   return (
     <div>
+<<<<<<< HEAD
       <Advanceserchdisplaypage storedData={[]} />
+=======
+      <Advanceserchdisplaypage />
+>>>>>>> origin/main
     </div>
   );
 };
