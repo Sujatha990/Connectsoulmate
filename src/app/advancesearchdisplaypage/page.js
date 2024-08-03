@@ -6,7 +6,6 @@ const Page = () => {
     <div>
       <Advanceserchdisplaypage storedData={[]} />
     
-      <Advanceserchdisplaypage />
     </div>
   );
 };
