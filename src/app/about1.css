@@ -1,79 +1,110 @@
+/* General styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Consistent left and right padding */
+}
+
+h2 {
+  font-size: 2em;
+  margin: 20px 0;
+  text-align: center;
+}
+
+p {
+  font-size: 1em;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* About Us section */
 .about-us {
-    padding: 20px;
+  padding: 20px;
 }
-.about-us img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    
-}
-.image-container {
-    /* Ensure the container does not grow excessively */
-    max-height: 800px; /* Adjust as needed */
-    overflow: hidden; /* Hide overflow if necessary */
-  }
-  
-  .image-container img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    height: auto; /* Maintain aspect ratio */
-  }
+
 .about-us-description {
-    display: flex;
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: center;
+  padding: 0 20px; /* Consistent left and right padding for description */
+}
+
+.image-container {
+  position: relative;
+  height: 800px; /* Set a specific height for the container */
+  overflow: hidden;
+}
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-us-image {
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px; /* Reduced padding for smaller screens */
+  }
+
+  .about-us-description, .section-content {
     text-align: center;
+    padding: 0 15px; /* Reduced padding for smaller screens */
+  }
 
-}
-/* globals.css */
-.about-us-description h2,
-.about-us-description p {
-    padding: 0 15px; /* Adjust padding for smaller screens */
-}
-
-.about-us img {
-    max-width: 100%;
+  .about-us img, .image-gallery img {
+    width: 100%;
     height: auto;
-    display: block; /* Ensure images are displayed properly */
-}
+  }
 
-.col-md-6 {
-    width: 100%; /* Full width on small screens */
-    flex: 1;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  .section-title {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 768px) {
-    .col-md-6 {
-        width: 50%; /* Two columns layout on medium and larger screens */
-    }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .about-us-description {
-        flex-direction: row; /* Place items side by side on medium and larger screens */
-        align-items: flex-start;
-        text-align: left;
-    }
+  .col-md-6 {
+    width: 50%;
+    padding: 15px;
+  }
+
+  .about-us-description {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 992px) {
-    .container {
-        padding: 0 30px; /* Adjust container padding for larger screens */
-    }
-}
+  .container {
+    padding: 0 30px; /* Increased padding for larger screens */
+  }
 
-  
-  /* Assuming you use a CSS file or styled-components */
-@media (max-width: 768px) {
-  .responsive-container {
-    padding-left: 0; /* Adjust padding for smaller screens */
+  .section-title {
+    font-size: 2em;
   }
 }
 
-@media (min-width: 769px) {
-  .responsive-container {
-    padding-left: 20px; /* Adjust padding for larger screens */
-  }
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Padding between 'How it Works' content */
+.section-content p {
+  margin-bottom: 30px; /* Increase padding between paragraphs */
 }

@@ -69,10 +69,9 @@ const Login2 = () => {
   }
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
       <NavBar style={{width:"100%", position:"relative"}}/>
       <NavBar2 style={{width:"100%", position:"relative"}}/>
-      <div className="container flex-grow-1 d-flex justify-content-center align-items-center">
         <div className="col-md-4">
           <h2 className="text-center" style={{paddingTop:"50px"}}>Login</h2>
           {error && <div className="alert alert-danger">{error}</div>}
@@ -170,7 +169,7 @@ const Login2 = () => {
             </div>
           </form>
         </div>
-      </div>
+      
       <Footer style={{width:"100%", position:"relative"}}/>
     </div>
   );

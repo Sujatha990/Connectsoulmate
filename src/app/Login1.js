@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { validateCredentials } from './ValidationUtlis';
 import dummyData, { addNewUser } from './data/dummyData';
 import Home1 from './Home1';
+import NavBar from './NavBar';
 import NavBar2 from './NavBar2';
 import NavBar3 from './NavBar3';
 import Link from 'next/link';
+import Footer from './Footer';
 
 const Login1 = () => {
   const [email, setEmail] = useState('');
@@ -56,6 +58,9 @@ const Login1 = () => {
   }
 
   return (
+    <>
+    <NavBar/>
+    <NavBar2/>
     <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
       <div className="col-md-4">
         <h2 className="text-center">Login</h2>
@@ -155,6 +160,8 @@ const Login1 = () => {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
