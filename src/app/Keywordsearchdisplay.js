@@ -1,5 +1,6 @@
 import React from 'react';
 import jsPDF from 'jspdf';
+import Image from 'next/image'; // Import the Image component from next/image
 import './Keyworddisplay.css';
 
 const Keywordsearchdisplay = ({ storedData }) => {
@@ -55,7 +56,13 @@ const Keywordsearchdisplay = ({ storedData }) => {
     <div className="profile-container">
       {storedData.map((data, index) => (
         <div key={index} className="profile-card">
-          <img src={data.image} alt={`Profile ${index + 1}`} className="profile-photo" />
+          <Image 
+            src={data.image} 
+            alt={`Profile ${index + 1}`} 
+            className="profile-photo" 
+            width={50} // Set width as needed
+            height={50} // Set height as needed
+          />
           <div className="profile-header">Profile {index + 1}</div>
           <div className="profile-detail">
             <strong>Keyword:</strong> <span>{data.keyword}</span>
