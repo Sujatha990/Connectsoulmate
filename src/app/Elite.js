@@ -10,7 +10,7 @@ const Elite = () => {
           <div className="col-md-6 about-us-description">
             <div>
               <h2 style={{paddingLeft:"50px"}} className="section-title">Elite Matrimonial Services</h2>
-              <p style={{paddingLeft:"50px"}} className="section-text">
+              <p style={{paddingLeft:"50px",textAlign:"justify"}} className="section-text">
                 At Connectsoulmate, we understand the unique needs of elite circles – business magnates, diplomats,
                 celebrities, and other accomplished individuals who seek a partner that matches their stature and
                 values. With an unwavering commitment to excellence, we curate matches that go beyond
@@ -22,7 +22,7 @@ const Elite = () => {
           </div>
           <div className="col-md-6">
             <Image
-              src="/Images/E1.jpeg" // Ensure the path is correct relative to the public directory
+              src="/Images/el.jpg" // Ensure the path is correct relative to the public directory
               alt="Elite Matrimonial Services Image"
               width={300} // Adjust width as needed
               height={300} // Adjust height as needed

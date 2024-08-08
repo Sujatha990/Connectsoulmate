@@ -1,37 +1,64 @@
-/* Keyworddisplay.css */
-
 .profile-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    background-color: #f5f5f5;
-  }
-  
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center align items horizontally */
+  margin: 20px; /* Add margin for container */
+}
+
+.profile-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  width: calc(50% - 20px); /* Two items per row with gap */
+  max-width: calc(50% - 20px); /* Ensure items don’t exceed this width */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.profile-photo {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 5%; /* Rounded corners */
+  object-fit: cover; /* Maintain aspect ratio */
+  display: block; /* Ensure image is displayed */
+}
+
+.download-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
   .profile-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 16px;
-    text-align: center;
+    width: calc(100% - 20px); /* One item per row */
+    max-width: calc(100% - 20px); /* Ensure items don’t exceed this width */
   }
-  
-  .profile-header {
-    font-size: 1.25em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .profile-detail {
-    font-size: 1em;
-    color: #666;
-  }
-  
-  .profile-detail strong {
-    color: #333;
-  }
-  
+}

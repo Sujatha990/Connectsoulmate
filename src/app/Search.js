@@ -1,21 +1,45 @@
 "use client"
 import React from 'react'
 import "./search.css";
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import Link from 'next/link';
 import Regularsearch from './Regularsearch';
 import AdvanceSearch from './AdvanceSearch';
-import Soulmatesearch from './Soulmatesearch';
 import Keywordsearch from './Keywordsearch';
-import Searchbyid from './Searchbyid';
-import Whoisonline from './Whoisonline';
 
 function Search() {
   const [selectedOption, setSelectedOption] = useState('regular');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+
+
+  useEffect(() => {
+    const checkAuthentication = () => {
+      // Simulate fetching authentication status from localStorage or context
+      const userAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+      setIsAuthenticated(userAuthenticated);
+    };
+
+    checkAuthentication();
+  }, []);
 
   const handleOptionChange = (option) => {
-    setSelectedOption(option);
+    if (isAuthenticated) {
+        setSelectedOption(option);
+      } else {
+    // Alert message and redirection logic
+    alert('Please login to continue.');
+    // Redirect to the login page
+    window.location.href = '/login2';
+    // Optionally, you can set the selected option if you handle login status
+      }
+  };
+  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // You can handle form submission here
+    alert('Form submitted');
   };
 
 
@@ -31,22 +55,15 @@ function Search() {
         <Link href="/regularsearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('regular')}>
           Regular Search
         </Link>
-        <Link href="/advancesearch" className={`btn btn-primary ${selectedOption === 'advance' ? 'active' : ''}`}  onClick={() => handleOptionChange('advance')}>
+        <Link href="/advancesearch" className={`btn btn-primary ${selectedOption === 'advance' ? 'active' : ''}`} onClick={() => handleOptionChange('advance')}>
           Advanced Search
         </Link>
-        <Link href="/soulmatesearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`}  onClick={() => handleOptionChange('soulmate')}>
-          Soulmate Search
-        </Link>
+
         <Link href="/keywordsearch" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('keyword')}>
           keyword Search
         </Link>
 
-        <Link href="/searchbyid" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('id')}>
-          Search by Id
-        </Link>
-        <Link href="/whoisonline" className={`btn btn-primary ${selectedOption === 'regular' ? 'active' : ''}`} onClick={() => handleOptionChange('online')}>
-          Who is Online
-        </Link>
+
 
 
       </div>
@@ -63,16 +80,16 @@ function Search() {
               </select>
             </div>
             <div className="form-group">
-                <label htmlFor="rangeInput"> Age with Min and Max Values (comma separated)</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="rangeInput"
-                  placeholder="enter the Age in between values, e.g., 10, 100"
-                  required // Ensures the field is required
-                />
-              </div>
-           
+              <label htmlFor="rangeInput"> Age with Min and Max Values (comma separated)</label>
+              <input
+                type="text"
+                className="form-control"
+                id="rangeInput"
+                placeholder="enter the Age in between values, e.g., 10, 100"
+                required // Ensures the field is required
+              />
+            </div>
+
             <div className="form-group">
               <label htmlFor="regularMaritalStatus">Marital Status</label>
               <select className="form-control" id="regularMaritalStatus">
@@ -88,48 +105,23 @@ function Search() {
               <select className="form-control" id="regularReligion">
                 <option value="">Select Religion</option>
                 <option value="hinduism">Hinduism</option>
-                <option value="islam">Islam</option>
                 <option value="christianity">Christianity</option>
-                <option value="sikhism">Sikhism</option>
-                <option value="buddhism">Buddhism</option>
-                <option value="jainism">Jainism</option>
-                <option value="zoroastrianism">Zoroastrianism</option>
-                <option value="judaism">Judaism</option>
                 <option value="other">Other</option>
               </select>
             </div>
-            
+
+
             <div className="form-group">
-              <label htmlFor="regularCaste">Caste</label>
-              <select className="form-control" id="regularCaste">
-                <option value="">Select caste</option>
-                <option value="Vokkaliga">Vokkaliga</option>
-                <option value="Lingayat">Lingayat</option>
-                <option value="Kuruba">Kuruba</option>
-                <option value="Ediga">Ediga</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-                <option value="Kamma">Kamma</option>
-                <option value="Reddy">Reddy</option>
-                <option value="Kapu">Kapu</option>
-                <option value="Balija">Balija</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-              </select>
+              <label htmlFor="casteInput">Caste</label>
+              <input type="text" className="form-control" id="casteInput" placeholder="Enter caste" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="regularState">State</label>
-              <select className="form-control" id="regularState">
-                <option value="">Select state</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Telangana">Telangana</option>
-              </select>
+              <label htmlFor="motherTongue">Mother Tongue</label>
+              <input type="text" className="form-control" id="motherTongue" placeholder="Enter mother tongue" />
             </div>
-           
+
+
             <div className="form-group">
               <label htmlFor="regularEducation">Education</label>
               <select className="form-control" id="regularEducation">
@@ -200,13 +192,7 @@ function Search() {
               <select className="form-control" id="regularReligion">
                 <option value="">Select Religion</option>
                 <option value="hinduism">Hinduism</option>
-                <option value="islam">Islam</option>
                 <option value="christianity">Christianity</option>
-                <option value="sikhism">Sikhism</option>
-                <option value="buddhism">Buddhism</option>
-                <option value="jainism">Jainism</option>
-                <option value="zoroastrianism">Zoroastrianism</option>
-                <option value="judaism">Judaism</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -214,63 +200,27 @@ function Search() {
               <label htmlFor="regularMotherTongue">Mother Tongue</label>
               <select className="form-control" id="regularMotherTongue">
                 <option value="">Select Mother Tongue</option>
-                <option value="kannada">Kannada</option>
                 <option value="telugu">Telugu</option>
+                <option value="kannada">Kannada</option>
+                <option value="tamil">Tamil</option>
+                <option value="malayalam">Malayalam</option>
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="others">Others</option>
+
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="regularCaste">Caste</label>
-              <select className="form-control" id="regularCaste">
-                <option value="">Select caste</option>
-                <option value="Vokkaliga">Vokkaliga</option>
-                <option value="Lingayat">Lingayat</option>
-                <option value="Kuruba">Kuruba</option>
-                <option value="Ediga">Ediga</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-                <option value="Kamma">Kamma</option>
-                <option value="Reddy">Reddy</option>
-                <option value="Kapu">Kapu</option>
-                <option value="Balija">Balija</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-              </select>
+              <label htmlFor="casteInput">Caste</label>
+              <input type="text" className="form-control" id="casteInput" placeholder="Enter caste" />
             </div>
+
             <div className="form-group">
-              <label htmlFor="regularState">State</label>
-              <select className="form-control" id="regularState">
-                <option value="">Select state</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Telangana">Telangana</option>
-              </select>
+              <label htmlFor="motherTongue">Mother Tongue</label>
+              <input type="text" className="form-control" id="motherTongue" placeholder="Enter mother tongue" />
             </div>
-            <div className="form-group">
-              <label htmlFor="regularDistrictCity">District</label>
-              <select className="form-control" id="regularDistrictCity">
-                <option value="">Select district</option>
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysuru">Mysuru</option>
-                <option value="Mangaluru">Mangaluru</option>
-                <option value="Hubballi">Hubballi</option>
-                <option value="Belagavi">Belagavi</option>
-                <option value="Shivamogga">Shivamogga</option>
-                <option value="Visakhapatnam">Visakhapatnam</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Guntur">Guntur</option>
-                <option value="Nellore">Nellore</option>
-                <option value="Kurnool">Kurnool</option>
-                <option value="Tirupati">Tirupati</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Warangal">Warangal</option>
-                <option value="Nizamabad">Nizamabad</option>
-                <option value="Khammam">Khammam</option>
-                <option value="Karimnagar">Karimnagar</option>
-                <option value="Nalgonda">Nalgonda</option>
-              </select>
-            </div>
+
+
             <div className="form-group">
               <label htmlFor="regularEducation">Education</label>
               <select className="form-control" id="regularEducation">
@@ -418,137 +368,7 @@ function Search() {
           </div>
         )}
 
-        {selectedOption === 'soulmate' && (
-          <div id="soulmateSearch" className="search-section">
-            <div className="form-group">
-              <label htmlFor="regularGender">Gender</label>
-              <select className="form-control" id="regularGender">
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularAge">Age</label>
-              <input type="number" className="form-control" id="regularAge" placeholder="Enter age" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularHeight">Height</label>
-              <input type="text" className="form-control" id="regularHeight" placeholder="Enter height range" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularMaritalStatus">Marital Status</label>
-              <select className="form-control" id="regularMaritalStatus">
-                <option value="any">Any</option>
-                <option value="never-married">Never Married</option>
-                <option value="widowed">Widowed</option>
-                <option value="divorced">Divorced</option>
-                <option value="awaiting-divorce">Awaiting Divorce</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularReligion">Religion</label>
-              <select className="form-control" id="regularReligion">
-                <option value="">Select Religion</option>
-                <option value="hinduism">Hinduism</option>
-                <option value="islam">Islam</option>
-                <option value="christianity">Christianity</option>
-                <option value="sikhism">Sikhism</option>
-                <option value="buddhism">Buddhism</option>
-                <option value="jainism">Jainism</option>
-                <option value="zoroastrianism">Zoroastrianism</option>
-                <option value="judaism">Judaism</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularMotherTongue">Mother Tongue</label>
-              <select className="form-control" id="regularMotherTongue">
-                <option value="">Select Mother Tongue</option>
-                <option value="kannada">Kannada</option>
-                <option value="telugu">Telugu</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularCaste">Caste</label>
-              <select className="form-control" id="regularCaste">
-                <option value="">Select caste</option>
-                <option value="Vokkaliga">Vokkaliga</option>
-                <option value="Lingayat">Lingayat</option>
-                <option value="Kuruba">Kuruba</option>
-                <option value="Ediga">Ediga</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-                <option value="Kamma">Kamma</option>
-                <option value="Reddy">Reddy</option>
-                <option value="Kapu">Kapu</option>
-                <option value="Balija">Balija</option>
-                <option value="Brahmin">Brahmin</option>
-                <option value="SC">Scheduled Caste (SC)</option>
-                <option value="ST">Scheduled Tribe (ST)</option>
-              </select>
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="regularState">State</label>
-              <select className="form-control" id="regularState">
-                <option value="">Select state</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Telangana">Telangana</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularDistrictCity">District</label>
-              <select className="form-control" id="regularDistrictCity">
-                <option value="">Select district</option>
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysuru">Mysuru</option>
-                <option value="Mangaluru">Mangaluru</option>
-                <option value="Hubballi">Hubballi</option>
-                <option value="Belagavi">Belagavi</option>
-                <option value="Shivamogga">Shivamogga</option>
-                <option value="Visakhapatnam">Visakhapatnam</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Guntur">Guntur</option>
-                <option value="Nellore">Nellore</option>
-                <option value="Kurnool">Kurnool</option>
-                <option value="Tirupati">Tirupati</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Warangal">Warangal</option>
-                <option value="Nizamabad">Nizamabad</option>
-                <option value="Khammam">Khammam</option>
-                <option value="Karimnagar">Karimnagar</option>
-                <option value="Nalgonda">Nalgonda</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="regularEducation">Education</label>
-              <select className="form-control" id="regularEducation">
-                <option value="">Select education</option>
-                <option value="Primary">Primary</option>
-                <option value="Secondary">Secondary</option>
-                <option value="Higher Secondary">Higher Secondary</option>
-                <option value="Diploma">Diploma</option>
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Postgraduate">Postgraduate</option>
-                <option value="Doctorate">Doctorate</option>
-                <option value="BE/B.Tech from VTU">BE/B.Tech from VTU (Karnataka)</option>
-                <option value="MBBS from RGUHS">MBBS from RGUHS (Karnataka)</option>
-                <option value="MBA from Bangalore University">MBA from Bangalore University</option>
-                <option value="B.Tech from JNTU">B.Tech from JNTU (Andhra Pradesh)</option>
-                <option value="MBBS from NTRUHS">MBBS from NTRUHS (Andhra Pradesh)</option>
-                <option value="MBA from Andhra University">MBA from Andhra University</option>
-                <option value="B.Tech from JNTUH">B.Tech from JNTUH (Telangana)</option>
-                <option value="MBBS from KNRUHS">MBBS from KNRUHS (Telangana)</option>
-                <option value="MBA from Osmania University">MBA from Osmania University</option>
-              </select>
-            </div>
-
-
-            <Link href="/soulmatesearch" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</Link>
-          </div>
-        )}
 
         {selectedOption === 'keyword' && (
           <div id="keywordSearch" className="search-section">
@@ -560,22 +380,7 @@ function Search() {
           </div>
         )}
 
-        {selectedOption === 'id' && (
-          <div id="searchById" className="search-section">
-            <div className="form-group">
-              <label htmlFor="userId">User ID</label>
-              <input type="text" className="form-control" id="userId" placeholder="Enter user ID" />
-            </div>
-            <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Search</button>
-          </div>
-        )}
 
-        {selectedOption === 'online' && (
-          <div id="whoIsOnline" className="search-section">
-            <p>Showing all users who are currently online.</p>
-            <button type="submit" className="btn btn-primary" style={{ marginTop: "30px" }}>Refresh</button>
-          </div>
-        )}
       </form>
     </div>
   );

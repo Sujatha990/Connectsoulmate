@@ -1,11 +1,79 @@
 .about-us {
-    padding: 50px 50px;
+    padding: 20px;
 }
 .about-us img {
     max-width: 100%;
     height: auto;
+    display: block;
+    
 }
+.image-container {
+    /* Ensure the container does not grow excessively */
+    max-height: 800px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflow if necessary */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+  }
 .about-us-description {
     display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
     align-items: center;
+    text-align: center;
+
+}
+/* globals.css */
+.about-us-description h2,
+.about-us-description p {
+    padding: 0 15px; /* Adjust padding for smaller screens */
+}
+
+.about-us img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure images are displayed properly */
+}
+
+.col-md-6 {
+    width: 100%; /* Full width on small screens */
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        width: 50%; /* Two columns layout on medium and larger screens */
+    }
+
+    .about-us-description {
+        flex-direction: row; /* Place items side by side on medium and larger screens */
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 30px; /* Adjust container padding for larger screens */
+    }
+}
+
+  
+  /* Assuming you use a CSS file or styled-components */
+@media (max-width: 768px) {
+  .responsive-container {
+    padding-left: 0; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-container {
+    padding-left: 20px; /* Adjust padding for larger screens */
+  }
 }

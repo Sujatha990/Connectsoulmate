@@ -1,15 +1,15 @@
 import React from 'react'
-import Whoisonline from '../Whoisonline'
+import Upgradereg1 from '../Upgradereg1'
+import NavBar from '../NavBar'
+import NavBar2 from '../NavBar2'
 import Footer from '../Footer'
-import NavBar from "../NavBar";
-import NavBar2 from "../NavBar2";
 
 const page = () => {
   return (
     <div>
       <NavBar/>
       <NavBar2/>
-      <Whoisonline/>
+      <Upgradereg1/>
       <Footer/>
     </div>
   )

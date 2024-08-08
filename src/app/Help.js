@@ -30,7 +30,7 @@ const Help = () => {
       <div class="col-md-6">
         <div class="contact-info">
           <h2>Contact Information</h2>
-          <p><strong>Email:</strong> example@example.com</p>
+          <p><strong>Email:</strong> info@ConnectSoulmate.com</p>
         </div>
       </div>
     </div>

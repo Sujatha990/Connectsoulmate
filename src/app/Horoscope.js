@@ -11,12 +11,12 @@ const Horoscope = () => {
           <div className="col-md-6 about-us-description">
             <div>
               <h2 style={{ paddingLeft: '50px' }}>Horoscope Matching Services</h2>
-              <p style={{ paddingLeft: '50px', marginBottom: '20px' }}>
+              <p style={{ paddingLeft: '50px', marginBottom: '20px',textAlign:"justify" }}>
                 Step into a realm where tradition meets insight with our Horoscope Matching Services. Delve into the ancient art of astrological compatibility to ensure a harmonious and blissful journey towards matrimony.
               </p>
 
               <h2 style={{ paddingLeft: '50px', paddingTop: '30px' }}>Our Range of Services:</h2>
-              <div style={{ paddingLeft: '50px' }}>
+              <div style={{ paddingLeft: '50px',textAlign:"justify" }}>
                 <p><strong>1. Astrological Expertise:</strong> Our seasoned astrologers meticulously analyze horoscopes to unveil celestial alignments that influence your relationship compatibility.</p>
                 <p><strong>2. Cosmic Harmony:</strong> Discover the alignment of stars, planets, and cosmic energies that impact your potential union. Our services provide insights into aspects like emotional compatibility, financial stability, and familial harmony.</p>
                 <p><strong>3. Personalized Guidance:</strong> Our astrologers offer personalized consultations, guiding you through the nuances of horoscope compatibility and addressing any queries you may have.</p>
@@ -28,7 +28,7 @@ const Horoscope = () => {
           </div>
           <div className="col-md-6">
             <Image
-              src="/Images/Horoscope.jpeg" // Ensure the path is correct relative to the public directory
+              src="/Images/hor.jpg" // Ensure the path is correct relative to the public directory
               alt="Horoscope Matching Services"
               width={400} // Adjust width as needed
               height={300} // Adjust height as needed

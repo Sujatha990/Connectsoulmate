@@ -7,7 +7,7 @@ const Side = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <Image
-            src="/Images/Replaceimg2.jpg" // Path relative to public directory
+            src="/Images/nav2.jpg" // Path relative to public directory
             alt="Image 2"
             width={600}
             height={600}
@@ -16,7 +16,7 @@ const Side = () => {
         </div>
         <div className="carousel-item">
           <Image
-            src="/Images/Replaceimg1.jpg"
+            src="/Images/nav1.jpg"
             alt="Image 1"
             width={600}
             height={600}
@@ -25,7 +25,7 @@ const Side = () => {
         </div>
         <div className="carousel-item">
           <Image
-            src="/Images/Replaceimg3.jpg"
+            src="/Images/nav3.webp"
             alt="Image 3"
             width={600}
             height={600}

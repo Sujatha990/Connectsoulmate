@@ -1,5 +1,6 @@
 import React from 'react'
 import "./globals.css";
+import Link from 'next/link';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,7 +20,7 @@ const Footer = () => {
               <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3"></i>ConnectSoulmate
               </h6>
-              <p>
+              <p style={{textAlign:"justify"}}>
               In the rich tapestry of Indian culture, the traditional practice of arranged marriage holds a significant place. For generations, parents have taken on the important task of seeking ideal life partners for their children, collaborating with relatives, marriage bureaus, friends, and various intermediaries.
               </p>
               <div>
@@ -51,31 +52,31 @@ const Footer = () => {
                 Useful links
               </h6>
               <p>
-                <a href="#!" class="text-reset">Home</a>
+                <Link href="/home" class="text-reset">Home</Link>
               </p>
               <p>
-                <a href="#!" class="text-reset">About</a>
+                <Link href="/about" class="text-reset">About</Link>
               </p>
               <p>
-                <a href="#!" class="text-reset">Services</a>
+                <Link href="/service" class="text-reset">Services</Link>
               </p>
               <p>
-                <a href="#!" class="text-reset">Packages</a>
+                <Link href="/upgrade" class="text-reset">Packages</Link>
               </p>
               <p>
-                <a href="#!" class="text-reset">SucessStories</a>
+                <Link href="/sucessstories" class="text-reset">SucessStories</Link>
               </p>
             </div>
     
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              
               <p>
                 <i class="fas fa-envelope me-3"></i>
-                info@example.com
+                info@ConnectSoulmate.com
               </p>
               
-              <p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
+             
             </div>
           </div>
         </div>
@@ -83,7 +84,7 @@ const Footer = () => {
     
       <div class="text-center p-4">
 
-        © 2021 Copyright:
+        © 2024 Copyright:
         <a class="text-reset fw-bold" href="https://ConnectSoulmate.com/">ConnectSoulmate.com</a>
       </div>
     </footer>

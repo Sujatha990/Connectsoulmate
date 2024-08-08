@@ -10,7 +10,7 @@ const Assisted = () => {
           <div className="col-md-6 about-us-description">
             <div>
               <h2 style={{ paddingLeft: '50px' }}>Assisted Services</h2>
-              <p style={{ paddingLeft: '50px' }}>
+              <p style={{ paddingLeft: '50px',textAlign:"justify" }}>
                 This innovative approach has facilitated countless members in uncovering their ideal life partners.
                 With a vast network of Relationship Managers spread across India, we ensure that the service is
                 offered in your preferred language. Your journey will be guided by a dedicated Relationship Manager
@@ -20,7 +20,7 @@ const Assisted = () => {
           </div>
           <div className="col-md-6">
             <Image
-              src="/Images/Assisted.jpeg" // Ensure the path is correct relative to the public directory
+              src="/Images/ass.jpg" // Ensure the path is correct relative to the public directory
               alt="Assisted Services Image"
               width={400} // Adjust size as needed
               height={300} // Adjust size as needed

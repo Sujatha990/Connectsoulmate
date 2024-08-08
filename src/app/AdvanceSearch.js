@@ -16,8 +16,6 @@ const AdvanceSearch = () => {
     religion: '',
     motherTongue: '',
     caste: '',
-    state: '',
-    districtCity: '',
     education: '',
     physicalStatus: '',
     employedIn: '',
@@ -48,8 +46,6 @@ const AdvanceSearch = () => {
       religion: formData.religion,
       motherTongue: formData.motherTongue,
       caste: formData.caste,
-      state: formData.state,
-      districtCity: formData.districtCity,
       education: formData.education,
       physicalStatus: formData.physicalStatus,
       employedIn: formData.employedIn,
@@ -74,8 +70,6 @@ const AdvanceSearch = () => {
       religion: '',
       motherTongue: '',
       caste: '',
-      state: '',
-      districtCity: '',
       education: '',
       physicalStatus: '',
       employedIn: '',
@@ -147,13 +141,7 @@ const AdvanceSearch = () => {
                   <select className="form-control" id="religion" value={formData.religion} onChange={handleInputChange}>
                     <option value="">Select Religion</option>
                     <option value="hinduism">Hinduism</option>
-                    <option value="islam">Islam</option>
                     <option value="christianity">Christianity</option>
-                    <option value="sikhism">Sikhism</option>
-                    <option value="buddhism">Buddhism</option>
-                    <option value="jainism">Jainism</option>
-                    <option value="zoroastrianism">Zoroastrianism</option>
-                    <option value="judaism">Judaism</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -161,62 +149,21 @@ const AdvanceSearch = () => {
                   <label htmlFor="motherTongue">Mother Tongue</label>
                   <select className="form-control" id="motherTongue" value={formData.motherTongue} onChange={handleInputChange}>
                     <option value="">Select Mother Tongue</option>
-                    <option value="kannada">Kannada</option>
                     <option value="telugu">Telugu</option>
+                    <option value="kannada">Kannada</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="malayalam">Malayalam</option>
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="others">Others</option>
+
                   </select>
-                </div>
+                
+               
                 <div className="form-group">
-                  <label htmlFor="caste">Caste</label>
-                  <select className="form-control" id="caste" value={formData.caste} onChange={handleInputChange}>
-                    <option value="">Select caste</option>
-                    <option value="Vokkaliga">Vokkaliga</option>
-                    <option value="Lingayat">Lingayat</option>
-                    <option value="Kuruba">Kuruba</option>
-                    <option value="Ediga">Ediga</option>
-                    <option value="Brahmin">Brahmin</option>
-                    <option value="SC">Scheduled Caste (SC)</option>
-                    <option value="ST">Scheduled Tribe (ST)</option>
-                    <option value="Kamma">Kamma</option>
-                    <option value="Reddy">Reddy</option>
-                    <option value="Kapu">Kapu</option>
-                    <option value="Balija">Balija</option>
-                    <option value="Brahmin">Brahmin</option>
-                    <option value="SC">Scheduled Caste (SC)</option>
-                    <option value="ST">Scheduled Tribe (ST)</option>
-                  </select>
+                  <label htmlFor="casteInput">Caste</label>
+                  <input type="text" className="form-control" id="casteInput" value={formData.caste} onChange={handleInputChange} placeholder="Enter caste" />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="state">State</label>
-                  <select className="form-control" id="state" value={formData.state} onChange={handleInputChange}>
-                    <option value="">Select state</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                    <option value="Telangana">Telangana</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="districtCity">District</label>
-                  <select className="form-control" id="districtCity" value={formData.districtCity} onChange={handleInputChange}>
-                    <option value="">Select district</option>
-                    <option value="Bengaluru">Bengaluru</option>
-                    <option value="Mysuru">Mysuru</option>
-                    <option value="Mangaluru">Mangaluru</option>
-                    <option value="Hubballi">Hubballi</option>
-                    <option value="Belagavi">Belagavi</option>
-                    <option value="Shivamogga">Shivamogga</option>
-                    <option value="Visakhapatnam">Visakhapatnam</option>
-                    <option value="Vijayawada">Vijayawada</option>
-                    <option value="Guntur">Guntur</option>
-                    <option value="Nellore">Nellore</option>
-                    <option value="Kurnool">Kurnool</option>
-                    <option value="Tirupati">Tirupati</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Warangal">Warangal</option>
-                    <option value="Nizamabad">Nizamabad</option>
-                    <option value="Khammam">Khammam</option>
-                    <option value="Karimnagar">Karimnagar</option>
-                    <option value="Nalgonda">Nalgonda</option>
-                  </select>
                 </div>
                 <div className="form-group">
                   <label htmlFor="education">Education</label>
@@ -309,29 +256,11 @@ const AdvanceSearch = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="nakshatra">Nakshatra</label>
-                  <select className="form-control" id="nakshatra" value={formData.nakshatra} onChange={handleInputChange}>
-                    <option value="">Select nakshatra</option>
-                    <option value="Ashwini">Ashwini</option>
-                    <option value="Bharani">Bharani</option>
-                    <option value="Krittika">Krittika</option>
-                    <option value="Rohini">Rohini</option>
-                    <option value="Mrigashira">Mrigashira</option>
-                    <option value="Ardra">Ardra</option>
-                    <option value="Punarvasu">Punarvasu</option>
-                  </select>
+                  <input type="text" className="form-control" id="nakshatra" value={formData.nakshatra} onChange={handleInputChange} placeholder="Enter Nakshatra" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="gothra">Gothra</label>
-                  <select className="form-control" id="gothra" value={formData.gothra} onChange={handleInputChange}>
-                    <option value="">Select gothra</option>
-                    <option value="Vashishta">Vashishta</option>
-                    <option value="Kashyapa">Kashyapa</option>
-                    <option value="Bharadwaj">Bharadwaj</option>
-                    <option value="Gautama">Gautama</option>
-                    <option value="Vishvamitra">Vishvamitra</option>
-                    <option value="Koundinya">Koundinya</option>
-                    <option value="Atreya">Atreya</option>
-                  </select>
+                  <input type="text" className="form-control" id="gothra" value={formData.gothra} onChange={handleInputChange} placeholder="Enter Gothra" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="habits">Habits</label>

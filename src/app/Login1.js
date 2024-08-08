@@ -5,6 +5,7 @@ import dummyData, { addNewUser } from './data/dummyData';
 import Home1 from './Home1';
 import NavBar2 from './NavBar2';
 import NavBar3 from './NavBar3';
+import Link from 'next/link';
 
 const Login1 = () => {
   const [email, setEmail] = useState('');
@@ -148,8 +149,8 @@ const Login1 = () => {
               Login
             </button>
             <p className="small fw-bold mt-2 pt-1 mb-0">
-              Don&apos;t have an account? <a href="#!" className="link-danger">Register</a>
-            </p>
+  Don&apos;t have an account? <Link href="/register" className="link-danger">Register</Link>
+</p>
           </div>
         </form>
       </div>

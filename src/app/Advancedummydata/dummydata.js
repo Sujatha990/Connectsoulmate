@@ -1,5 +1,6 @@
 const dummydata = [
     {
+      image: '/Images/fb3.jpeg', // Ensure paths are correct
       gender: 'male',
       age: '28',
       height: '5\'10"',
@@ -7,8 +8,6 @@ const dummydata = [
       religion: 'Hinduism',
       motherTongue: 'Telugu',
       caste: 'Reddy',
-      state: 'Andhra Pradesh',
-      districtCity: 'Vijayawada',
       education: 'Postgraduate',
       physicalStatus: 'Normal',
       employedIn: 'Private',
@@ -21,6 +20,7 @@ const dummydata = [
       showProfile: 'With Photo'
     },
     {
+      image: '/Images/fb1.jpg', // Ensure paths are correct
       gender: 'female',
       age: '25',
       height: '5\'6"',
@@ -28,8 +28,6 @@ const dummydata = [
       religion: 'Islam',
       motherTongue: 'Urdu',
       caste: 'Sunni',
-      state: 'Telangana',
-      districtCity: 'Hyderabad',
       education: 'Undergraduate',
       physicalStatus: 'Normal',
       employedIn: 'Government',

@@ -11,20 +11,20 @@ const Event = () => {
           <div className="col-md-6 about-us-description">
             <div>
               <h2 style={{ paddingLeft: "50px" }} className="section-title">Wedding Events Services</h2>
-              <p style={{ paddingLeft: "50px" }} className="section-text">
+              <p style={{ paddingLeft: "50px" ,textAlign:"justify"}} className="section-text">
                 Weddings in India are renowned for their extensive preparations and bustling activities. Families often
                 invest months in meticulously organizing the various ceremonies that constitute a wedding event.
                 These celebrations can span around a week, presenting a significant organizational challenge,
                 particularly if there is limited additional assistance available. This is the precise scenario where we
                 consider it our duty to step in and offer our support.
               </p>
-              <p style={{ paddingLeft: "50px" }} className="section-text">
+              <p style={{ paddingLeft: "50px" ,textAlign:"justify"}} className="section-text">
                 Our dedicated team is committed to turning your vision into reality, ensuring that every detail is
                 meticulously planned and flawlessly executed.
               </p>
 
               <h2 style={{ textAlign: "center", paddingTop: "50px" }} className="services-heading">Our Range of Services:</h2>
-              <div style={{ paddingLeft: "50px" }}>
+              <div style={{ paddingLeft: "50px",textAlign:"justify" }}>
                 <div className="services-list">
                   <p><strong>1. Wedding Planning:</strong> Our experienced planners work closely with you to understand your
                     preferences and design a comprehensive wedding plan. From venue selection to theme

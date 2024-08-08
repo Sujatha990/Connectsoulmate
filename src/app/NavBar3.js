@@ -1,13 +1,18 @@
-// NavBar.jsx
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import "./navbar.css";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure you import Bootstrap CSS
+import './navbar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const NavBar3 = ({ isLoggedIn, username }) => {
+const NavBar3 = ({ isLoggedIn, username, setUsername }) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [isEditing, setIsEditing] = useState(false);
+    const [editedUsername, setEditedUsername] = useState(username);
+
+    useEffect(() => {
+        setEditedUsername(username); // Sync editedUsername with username from props
+    }, [username]);
 
     const toggleDropdown = () => {
         setShowDropdown(prevState => !prevState);
@@ -15,7 +20,7 @@ const NavBar3 = ({ isLoggedIn, username }) => {
 
     const handleLogout = () => {
         alert('Logout clicked');
-        // You should ideally handle logout logic here
+        // Handle logout logic here
     };
 
     const handleViewDetails = () => {
@@ -24,10 +29,27 @@ const NavBar3 = ({ isLoggedIn, username }) => {
 
     const handleCloseModal = () => {
         setShowModal(false);
+        setIsEditing(false);
+        setEditedUsername(username);
+    };
+
+    const handleEditToggle = () => {
+        setIsEditing(prevState => !prevState);
+    };
+
+    const handleSaveChanges = () => {
+        if (typeof setUsername === 'function') {
+            console.log("Saving new username:", editedUsername);
+            setUsername(editedUsername); // Update the username in the parent component
+        } else {
+            console.error("setUsername is not a function");
+        }
+        setIsEditing(false);
+        setShowModal(false);
     };
 
     useEffect(() => {
-        require("bootstrap/dist/js/bootstrap.js");
+        require('bootstrap/dist/js/bootstrap.js');
     }, []);
 
     return (
@@ -40,7 +62,7 @@ const NavBar3 = ({ isLoggedIn, username }) => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{paddingRight:"150px"}}>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{ paddingRight: "150px" }}>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{ fontSize: "20px" }}>
                             <li className="nav-item">
                                 <Link href="/register" className="nav-link text-white">
@@ -60,7 +82,7 @@ const NavBar3 = ({ isLoggedIn, username }) => {
 
                             {isLoggedIn ? (
                                 <li className="nav-item">
-                                    <div className="nav-link text-white" onClick={toggleDropdown} style={{ cursor: 'pointer'}}>
+                                    <div className="nav-link text-white" onClick={toggleDropdown} style={{ cursor: 'pointer' }}>
                                         <div className="user-icon">
                                             {username.charAt(0).toUpperCase()}
                                         </div>
@@ -105,10 +127,33 @@ const NavBar3 = ({ isLoggedIn, username }) => {
                             </button>
                         </div>
                         <div className="modal-body">
-                            <p>Username: {username}</p>
+                            <div className="form-group">
+                                <label htmlFor="username">Username:</label>
+                                {isEditing ? (
+                                    <input
+                                        type="text"
+                                        id="username"
+                                        className="form-control"
+                                        value={editedUsername}
+                                        onChange={(e) => setEditedUsername(e.target.value)}
+                                    />
+                                ) : (
+                                    <p>{editedUsername}</p>
+                                )}
+                            </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+                            {isEditing ? (
+                                <>
+                                    <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Cancel</button>
+                                    <button type="button" className="btn btn-primary" onClick={handleSaveChanges}>Save changes</button>
+                                </>
+                            ) : (
+                                <>
+                                    <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+                                    <button type="button" className="btn btn-primary" onClick={handleEditToggle}>Edit</button>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

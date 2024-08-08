@@ -1,41 +1,38 @@
 const dummydata = [
     {
+      image: '/Images/fb3.jpeg', // Ensure paths are correct
       gender: 'female',
       age: 28,
       maritalStatus: 'never-married',
       religion: 'hinduism',
+      motherTongue: 'Telugu',
       caste: 'Vokkaliga',
-      state: 'Karnataka',
       education: 'Undergraduate',
-      employedIn:'bussiness',
-
+      employedIn: 'business',
     },
     {
+      image: '/Images/fb1.jpg', // Ensure paths are correct
       gender: 'male',
       age: 32,
       maritalStatus: 'widowed',
       religion: 'islam',
+      motherTongue: 'Kannada',
       caste: 'Reddy',
-      state: 'Andhra Pradesh',
       education: 'Postgraduate',
-      employedIn:'private',
-
-
+      employedIn: 'private',
     },
     {
+      image: '/Images/fb2.jpg', // Ensure paths are correct
       gender: 'male',
       age: 25,
       maritalStatus: 'never-married',
       religion: 'christianity',
+      motherTongue: 'Kannada',
       caste: 'Brahmin',
-      state: 'Telangana',
       education: 'Higher Secondary',
-      employedIn:'software',
-
+      employedIn: 'software',
     },
     // Add more objects as needed
   ];
   
   export default dummydata;
-  
-  

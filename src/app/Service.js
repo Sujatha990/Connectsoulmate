@@ -14,7 +14,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/PreWedding.jpg" // Path relative to public directory
+                    src="/Images/pre.jpg" // Path relative to public directory
                     alt="Pre-Wedding Dietician Services"
                     width={600}
                     height={400}
@@ -30,7 +30,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/NRI.jpeg"
+                    src="/Images/nri1.jpg"
                     alt="NRI Matrimonial Services"
                     width={600}
                     height={400}
@@ -46,7 +46,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/E1.jpeg"
+                    src="/Images/el.jpg"
                     alt="Elite Matrimonial Services"
                     width={600}
                     height={400}
@@ -82,7 +82,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/Divorcee.jpeg"
+                    src="/Images/d1.jpg"
                     alt="Divorcee Matrimony Services"
                     width={600}
                     height={400}
@@ -118,7 +118,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/Assisted.jpeg"
+                    src="/Images/ass.jpg"
                     alt="Assisted Services"
                     width={600}
                     height={400}
@@ -134,7 +134,7 @@ const Service = () => {
               <div className="col-md-4">
                 <div className="card">
                   <Image
-                    src="/Images/Horoscope.jpeg"
+                    src="/Images/hor.jpg"
                     alt="Horoscope Matching Services"
                     width={600}
                     height={400}
@@ -144,6 +144,22 @@ const Service = () => {
                   <div className="card-body">
                     <p className="card-text">Horoscope Matching Services</p>
                     <Link href="/horoscope" className="btn btn-primary">Click for more Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card">
+                  <Image
+                    src="/Images/PreWedding.jpg" // Path relative to public directory
+                    alt="Pre-Wedding Dietician Services"
+                    width={600}
+                    height={400}
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top"
+                  />
+                  <div className="card-body">
+                    <p className="card-text">Pre-Wedding Dietician Services</p>
+                    <Link href="/prewedding" className="btn btn-primary">Click for more Details</Link>
                   </div>
                 </div>
               </div>

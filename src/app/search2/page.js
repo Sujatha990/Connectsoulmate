@@ -1,15 +1,15 @@
 import React from 'react'
-import Soulmateseachdisplay from '../Soulmateseachdisplay'
+import Search2 from '../Search2'
+import NavBar from '../NavBar'
+import NavBar2 from '../NavBar2'
 import Footer from '../Footer'
-import NavBar from "../NavBar";
-import NavBar2 from "../NavBar2";
 
 const page = () => {
   return (
     <div>
       <NavBar/>
       <NavBar2/>
-      <Soulmateseachdisplay storedData={[]}/>
+      <Search2/>
       <Footer/>
     </div>
   )
