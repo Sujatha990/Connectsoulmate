@@ -89,7 +89,10 @@ const Advanceserchdisplaypage = ({ storedData }) => {
         <div className="results-list">
           {storedData.map((data, index) => (
             <div key={data.id} className="result-item">
+<<<<<<< HEAD
                 <div className="profile-photo-container">
+=======
+>>>>>>> origin/main
               <Image 
                 src={data.image} 
                 alt={`Profile ${data.id}`} 
@@ -97,7 +100,10 @@ const Advanceserchdisplaypage = ({ storedData }) => {
                 width={150} // Adjust the width as needed
                 height={150} // Adjust the height as needed
               />
+<<<<<<< HEAD
               </div>
+=======
+>>>>>>> origin/main
               <div className="profile-details">
                 <h3>Profile {index + 1}</h3>
                 <p><strong>Gender:</strong> {data.gender}</p>
