@@ -1,0 +1,77 @@
+/* General container padding */
+.container {
+    padding: 0 15px;
+    max-width: 1200px; /* Limit container width for larger screens */
+    margin: 0 auto; /* Center container horizontally */
+  }
+  
+  /* Center align content and image vertically and horizontally */
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text within the container */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+  }
+  
+  /* Ensure headings are centered and adjust margin */
+  .section-title,
+  .contact-heading {
+    margin: 20px 0; /* Margin above and below heading */
+    text-align: center; /* Center heading text */
+    width: 100%; /* Make sure heading takes full width for centering */
+  }
+  
+  /* Padding adjustments for different screen sizes */
+  .content-top-padding {
+    padding-top: 20px; /* Padding above content */
+  }
+  
+  .image-top-padding {
+    padding-top: 20px; /* Padding above the image */
+    padding-bottom: 20px; /* Padding below the image */
+  }
+  
+  /* Responsive image styles */
+  .responsive-image {
+    max-width: 100%; /* Ensure image scales with the container width */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 600px; /* Adjust max-width to increase image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .section-text{
+    text-align: justify;
+  }
+  /* Adjust padding and image height for larger screens */
+  @media (min-width: 768px) {
+    .content-top-padding {
+      padding-top: 40px; /* Increase top padding for larger screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 30px; /* Increase top padding for larger screens */
+      padding-bottom: 30px; /* Increase bottom padding for larger screens */
+    }
+  
+    .responsive-image {
+      max-width: 600px; /* Increase max-width for larger screens */
+    }
+  }
+  
+  /* Adjust padding and alignment for smaller screens */
+  @media (max-width: 767px) {
+    .content-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+      padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
+    }
+  
+    .responsive-image {
+      max-width: 100%; /* Ensure image scales down for smaller screens */
+    }
+  }
+  

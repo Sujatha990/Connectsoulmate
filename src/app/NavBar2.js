@@ -38,7 +38,7 @@ const NavBar2 = () => {
           
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" href="/successstories">
+          <Link className="nav-link text-white" href="/sucessstories">
             <i className="fas fa-star"></i> Success Stories
           </Link>
         </li>

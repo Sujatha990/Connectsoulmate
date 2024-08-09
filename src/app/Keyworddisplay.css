@@ -12,8 +12,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 20px;
-  width: calc(50% - 20px); /* Two items per row with gap */
-  max-width: calc(50% - 20px); /* Ensure items don’t exceed this width */
+  width: calc(33.333% - 20px); /* Three items per row */
+  max-width: calc(33.333% - 20px); /* Ensure items don’t exceed this width */
   display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center;
@@ -26,11 +26,11 @@
 }
 
 .profile-photo {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Max width for larger screens */
   border-radius: 5%; /* Rounded corners */
   object-fit: cover; /* Maintain aspect ratio */
-  display: block; /* Ensure image is displayed */
 }
 
 .download-button {
@@ -56,9 +56,22 @@
 }
 
 /* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .profile-card {
+    width: calc(50% - 20px); /* Two items per row for medium screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
 @media (max-width: 768px) {
   .profile-card {
-    width: calc(100% - 20px); /* One item per row */
-    max-width: calc(100% - 20px); /* Ensure items don’t exceed this width */
+    width: calc(100% - 20px); /* One item per row for small screens */
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    max-width: 120px; /* Smaller images on extra small screens */
   }
 }

@@ -1,0 +1,97 @@
+/* General container padding */
+.container {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Wrapper for entire component */
+  .divorcee-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Style for the image container */
+  .image-container {
+    width: 100%;
+    padding-top: 20px; /* Add padding above the image */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+  }
+  
+  .responsive-image {
+    width: 80%; /* Decrease the width of the image */
+    max-width: 900px; /* Set a maximum width for larger screens */
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Ensure headings are centered and adjust margin */
+  .section-title,
+  .contact-heading {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  /* Section text alignment */
+  .section-text {
+    text-align: justify;
+    padding: 0 15px;
+  }
+  
+  /* Adjust padding for text content section */
+  .text-content {
+    padding: 15px;
+  }
+  
+  /* Adjust padding and image height for larger screens */
+  @media (min-width: 768px) {
+    .section-title,
+    .contact-heading {
+      margin: 40px 0;
+    }
+  
+    .text-content {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  
+    .responsive-image {
+      width: 70%; /* Adjust the width for larger screens if necessary */
+      max-width: 800px; /* Adjust maximum width for larger screens */
+    }
+  }
+  
+  /* Adjust padding and alignment for smaller screens */
+  @media (max-width: 767px) {
+    .text-content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .responsive-image {
+      width: 90%; /* Make the image slightly larger on smaller screens */
+      max-width: none; /* Remove maximum width restriction for smaller screens */
+    }
+  }
+  
+  /* Full-width footer styling (if applicable) */
+  .footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Ensure footer sticks to the bottom of the page if content is short */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  

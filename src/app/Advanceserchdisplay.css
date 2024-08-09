@@ -1,6 +1,7 @@
 .search-results {
   margin: 20px;
   font-family: Arial, sans-serif;
+  padding: 0 10px; /* Add some horizontal padding */
 }
 
 h2 {
@@ -56,9 +57,10 @@ h2 {
 }
 
 .profile-photo {
-  width: 120px; /* Adjust size as needed */
-  height: 120px;
-  border-radius: 50%;
+  width: 100%; /* Make image width responsive */
+  max-width: 120px; /* Ensure image doesn't grow too large */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5%;
   object-fit: cover;
 }
 
@@ -83,10 +85,34 @@ h2 {
   font-size: 16px;
   margin-top: 20px;
 }
-.profile-photo {
-  width: 170px; /* Adjust size as needed */
-  height: 170px;
-  border-radius: 5%;
-  object-fit: cover;
-  display: block; /* Ensure image is displayed */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .result-item {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+  }
+
+  .profile-photo {
+    max-width: 100px; /* Smaller image size on mobile */
+  }
+
+  .download-button {
+    padding: 8px 12px; /* Smaller button on mobile */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-button {
+    padding: 6px 10px; /* Even smaller button on very small screens */
+    font-size: 10px;
+  }
+
+  .profile-details h3 {
+    font-size: 16px; /* Smaller font size on mobile */
+  }
+
+  .profile-details p {
+    font-size: 12px; /* Smaller font size on mobile */
+  }
 }

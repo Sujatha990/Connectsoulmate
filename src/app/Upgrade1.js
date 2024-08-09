@@ -1,5 +1,5 @@
 import React from 'react';
-import './upgrade1.css';
+import './Upgrade1.css';
 import Link from 'next/link';
 
 const Upgrade1 = () => {

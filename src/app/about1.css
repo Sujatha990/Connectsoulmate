@@ -29,7 +29,7 @@ p {
 
 .image-container {
   position: relative;
-  height: 800px; /* Set a specific height for the container */
+  height: 900px; /* Set a specific height for the container */
   overflow: hidden;
 }
 .image-wrapper {

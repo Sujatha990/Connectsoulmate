@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import Image from next/image
 import './Advanceserchdisplay.css';
 import jsPDF from 'jspdf';
 
@@ -88,7 +89,15 @@ const Advanceserchdisplaypage = ({ storedData }) => {
         <div className="results-list">
           {storedData.map((data, index) => (
             <div key={data.id} className="result-item">
-              <img src={data.image} alt={`Profile ${data.id}`} className="profile-photo" />
+                <div className="profile-photo-container">
+              <Image 
+                src={data.image} 
+                alt={`Profile ${data.id}`} 
+                className="profile-photo" 
+                width={150} // Adjust the width as needed
+                height={150} // Adjust the height as needed
+              />
+              </div>
               <div className="profile-details">
                 <h3>Profile {index + 1}</h3>
                 <p><strong>Gender:</strong> {data.gender}</p>

@@ -61,7 +61,7 @@ const Login2 = () => {
     return (
       <>
         <NavBar3 isLoggedIn={isLoggedIn} username={username} /> {/* Pass isLoggedIn and username to NavBar3 */}
-        <NavBar2/>
+        <NavBar2 />
         <Home1 />
         <Link href="/search2" ref={linkRef} style={{ display: 'none' }}>Search</Link> {/* Hidden Link for navigation */}
       </>
@@ -69,11 +69,12 @@ const Login2 = () => {
   }
 
   return (
-    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-      <NavBar style={{width:"100%", position:"relative"}}/>
-      <NavBar2 style={{width:"100%", position:"relative"}}/>
+    <>
+      <NavBar />
+      <NavBar2 />
+      <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
         <div className="col-md-4">
-          <h2 className="text-center" style={{paddingTop:"50px"}}>Login</h2>
+          <h2 className="text-center">Login</h2>
           {error && <div className="alert alert-danger">{error}</div>}
 
           <div className="d-flex flex-row align-items-center justify-content-center my-4">
@@ -163,16 +164,15 @@ const Login2 = () => {
               >
                 Login
               </button>
-              <p className="small fw-bold mt-2 pt-1 mb-0" style={{paddingBottom:"50px"}}>
+              <p className="small fw-bold mt-2 pt-1 mb-0">
                 Don&apos;t have an account? <Link href="/register" className="link-danger">Register</Link>
               </p>
             </div>
           </form>
         </div>
-      
-      <Footer style={{width:"100%", position:"relative"}}/>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 };
-
 export default Login2;

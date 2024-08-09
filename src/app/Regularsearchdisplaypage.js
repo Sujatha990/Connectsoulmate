@@ -1,6 +1,7 @@
 import React from 'react';
 import './Regularsearchdisplaypage.css';
 import jsPDF from 'jspdf';
+import Image from 'next/image';
 
 const Regularsearchdisplaypage = ({ storedData }) => {
   const handleDownload = (data) => {
@@ -75,14 +76,21 @@ const Regularsearchdisplaypage = ({ storedData }) => {
         <div className="results-list">
           {storedData.map((data, index) => (
             <div key={index} className="result-item">
-              <img src={data.image} alt={`Profile ${index + 1}`} className="profile-photo" />
+              <Image 
+                src={data.image} 
+                alt={`Profile ${index + 1}`} 
+                className="profile-photo" 
+                width={100} // Adjust as needed
+                height={100} // Adjust as needed
+                layout="fixed" // Fixed layout to avoid layout shifts
+              />
               <div className="profile-details">
                 <h3>Profile {index + 1}</h3>
                 <p><strong>Gender:</strong> {data.gender}</p>
                 <p><strong>Age:</strong> {data.age}</p>
                 <p><strong>Marital Status:</strong> {data.maritalStatus}</p>
                 <p><strong>Religion:</strong> {data.religion}</p>
-                <p><strong>motherTongue:</strong> {data.motherTongue}</p>
+                <p><strong>Mother Tongue:</strong> {data.motherTongue}</p>
                 <p><strong>Caste:</strong> {data.caste}</p>
                 <p><strong>Education:</strong> {data.education}</p>
                 <p><strong>Employed In:</strong> {data.employedIn}</p>

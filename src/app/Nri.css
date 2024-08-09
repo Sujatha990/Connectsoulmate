@@ -1,0 +1,66 @@
+/* General container padding */
+.container {
+    padding: 0 15px;
+  }
+  
+  /* Center align content and image */
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text within the container */
+  }
+  
+  /* Padding adjustments for different screen sizes */
+  .content-top-padding {
+    padding-top: 20px; /* Padding above content */
+  }
+  
+  .image-top-padding {
+    padding-top: 20px; /* Padding above the image */
+    padding-bottom: 20px; /* Padding below the image */
+  }
+  
+  /* Responsive image styles */
+  .responsive-image {
+    max-width: 100%; /* Ensure image scales with the container width */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 800px; /* Adjust max-width to reduce image width */
+    height: auto;    /* Maintain aspect ratio */
+  }
+  .description-text{
+    text-align: justify;
+  }
+  
+  /* Adjust padding and image height for larger screens */
+  @media (min-width: 768px) {
+    .content-top-padding {
+      padding-top: 40px; /* Increase top padding for larger screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 30px; /* Increase top padding for larger screens */
+      padding-bottom: 30px; /* Increase bottom padding for larger screens */
+    }
+  
+    .responsive-image {
+      height: 350px; /* Adjust height for larger screens */
+    }
+  }
+  
+  /* Adjust padding and alignment for smaller screens */
+  @media (max-width: 767px) {
+    .content-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+      padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
+    }
+  
+    .responsive-image {
+      height: 250px; /* Adjust height for smaller screens */
+    }
+  }
+  

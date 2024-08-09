@@ -1,0 +1,107 @@
+/* Ensure the container is centered horizontally and text is centered */
+.container {
+    padding: 0 15px;
+    max-width: 1200px; /* Limit container width for larger screens */
+    margin: 0 auto; /* Center container horizontally */
+  }
+  
+  /* Center align content and image */
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text within the container */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+  }
+  
+  /* Ensure headings are centered */
+  h2 {
+    margin: 20px 0; 
+    text-align: center; /* Center align headings */
+    width: 100%; /* Ensure h2 takes full width for centering */
+    display: inline-block; /* Ensure h2 behaves like a block element for centering */
+  }
+  
+  /* Padding adjustments for different screen sizes */
+  .content-top-padding {
+    padding-top: 20px; /* Padding above content */
+  }
+  
+  .image-top-padding {
+    padding-top: 20px; /* Padding above the image */
+    padding-bottom: 20px; /* Padding below the image */
+  }
+  
+  /* Responsive image styles */
+  .responsive-image {
+    max-width: 100%; /* Ensure image scales with the container width */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 500px; /* Adjust max-width to reduce image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .description-text {
+    text-align: justify; /* Justify text for paragraphs */
+  }
+  
+  /* Adjust padding and image height for larger screens */
+  @media (min-width: 768px) {
+    .content-top-padding {
+      padding-top: 40px; /* Increase top padding for larger screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 30px; /* Increase top padding for larger screens */
+      padding-bottom: 30px; /* Increase bottom padding for larger screens */
+    }
+  
+    .responsive-image {
+      max-width: 500px; /* Adjust max-width for larger screens */
+    }
+  }
+  
+  /* Adjust padding and alignment for smaller screens */
+  @media (max-width: 767px) {
+    .content-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+    }
+  
+    .image-top-padding {
+      padding-top: 20px; /* Adjust top padding for smaller screens */
+      padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
+    }
+  
+    .responsive-image {
+      max-width: 100%; /* Ensure image scales down for smaller screens */
+    }
+  }
+  
+  /* Full-width footer styling */
+  .footer {
+    width: 100%;
+    background-color: #f8f9fa; /* Background color (adjust as needed) */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center align footer text */
+    position: relative; /* Ensure footer is not fixed or absolute */
+    bottom: 0;
+    left: 0;
+    margin: 0; /* Remove default margin to ensure full width */
+  }
+  
+  /* Ensure the footer sticks to the bottom of the page if content is short */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    min-height: 100vh; /* Ensure wrapper takes full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-grow {
+    flex: 1; /* Allow content to grow and push footer down */
+  }
+  

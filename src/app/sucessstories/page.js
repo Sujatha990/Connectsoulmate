@@ -1,7 +1,7 @@
 import React from 'react'
-import SucessStories from '../SucessStories'
-import NavBar from "../NavBar";
-import NavBar2 from "../NavBar2";
+import NavBar from '../NavBar'
+import NavBar2 from '../NavBar2'
+import SuccessStories from '../SucessStories'
 import Footer from '../Footer'
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
     <div>
       <NavBar/>
       <NavBar2/>
-      <SucessStories/>
+      <SuccessStories/>
       <Footer/>
     </div>
   )
