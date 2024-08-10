@@ -1,78 +1,60 @@
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-  font-size: 1rem;
-  line-height: 2.15;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+/* General Form Styling */
+.form-group {
+  margin-bottom: 1.25em; /* Margin for spacing between form elements */
 }
 
-
-
-.card-registration .select-arrow {
-  top: 13px;
+.form-control {
+  width: 100%; /* Ensure inputs take full width of container */
+  padding: 0.75em; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 0.25em; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 .select-container {
   position: relative;
   display: inline-block;
-  width: 100%; /* Use 100% width for responsiveness */
-  max-width: 550px; /* Set a maximum width */
+  width: 100%; /* Responsive width */
+  max-width: 550px; /* Maximum width for larger screens */
 }
 
 .select-container select {
-  width: 100%; /* Ensure the select box takes the full width of the container */
-  padding-right: 2.5em; /* Adjust padding to make space for the arrow */
-  -webkit-appearance: none;
+  width: 100%; /* Full width of container */
+  padding-right: 2em; /* Space for the arrow */
+  -webkit-appearance: none; /* Remove default appearance */
   -moz-appearance: none;
   appearance: none;
   box-sizing: border-box;
 }
 
 .select-container::after {
-  content: '▼';
+  content: '▼'; /* Custom arrow */
   position: absolute;
-  right: 0.75em; /* Adjust as needed */
+  right: 0.75em; /* Adjust position of the arrow */
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
-}
-
-form-group {
-  margin-bottom: 1.25em; /* Use relative units for margins */
-}
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.h3-container {
-  margin-right: 1.25em; /* Use relative units for margins */
+  pointer-events: none; /* Prevent arrow from being clickable */
 }
 
 .arrow-container {
   position: absolute;
-  right: 1em; /* Adjust as needed */
+  right: 0.75em;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .arrow-wrapper {
-  width: 0.75em; /* Use relative units for arrow size */
-  height: 0.75em; /* Use relative units for arrow size */
+  width: 0.75em;
+  height: 0.75em;
   border-left: 0.375em solid transparent;
   border-right: 0.375em solid transparent;
   border-top: 0.5em solid #201f1f;
 }
 
-.flex-content {
-  text-align: center;
-}
-
 h1 {
-  font-size: 1.875rem; /* Use relative units */
-  margin-bottom: 0.625em; /* Use relative units */
+  font-size: 1.875rem; /* Heading size */
+  margin-bottom: 0.625em; /* Margin below heading */
 }
 
 .details-container {
@@ -110,7 +92,7 @@ h1 {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 0.75em 1.5625em; /* Use relative units */
+  padding: 0.75em 1.5625em;
   border-radius: 0.3125em;
   cursor: pointer;
   font-size: 1rem;
@@ -132,7 +114,7 @@ h1 {
   background-color: #ffc107;
   border-color: #ffc107;
   color: #fff;
-  padding: 0.625em 1.25em; /* Use relative units */
+  padding: 0.625em 1.25em;
   border-radius: 0.3125em;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
@@ -142,6 +124,7 @@ h1 {
   border-color: #e0a800;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .details-container {
     padding: 1em;
@@ -151,5 +134,15 @@ h1 {
     width: 100%;
     padding: 0.625em;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    margin-bottom: 1em; /* Adjust margin for smaller screens */
+  }
+
+  .form-control {
+    font-size: 0.875rem; /* Smaller font size for inputs */
   }
 }
