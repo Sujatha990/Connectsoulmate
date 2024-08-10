@@ -245,13 +245,13 @@ const Register = () => {
                                                     </div>
 
                                                     <div className="form-group mb-3">
-                                                        <label htmlFor="firstName">Name</label>
+                                                        <label htmlFor="Name">Name</label>
                                                         <input
                                                             type="text"
                                                             className="form-control"
-                                                            id="firstName"
-                                                            name="firstName"
-                                                            value={formData.firstName}
+                                                            id="Name"
+                                                            name="Name"
+                                                            value={formData.Name}
                                                             onChange={handleChange}
                                                             placeholder="Enter first name"
                                                             required
@@ -762,10 +762,22 @@ const Register = () => {
                                         )}
                                         {currentStep === 5 && (
                                             <>
-                                                <h3 className="mb-5 text-uppercase"></h3>
-                                                <h2 className="text-center mb-4">Upload Photo</h2>
+                                           
                                                 <div className="form-group" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="photo">Upload Photo</label>
+                                                    <input
+                                                        type="file"
+                                                        className="form-control"
+                                                        id="photo"
+                                                        name="photo"
+                                                        onChange={handleFileChange}
+                                                        required
+                                                    />
+                                                </div>
+                                                
+                                                
+                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                    <label htmlFor="photo">Upload Biodata</label>
                                                     <input
                                                         type="file"
                                                         className="form-control"
@@ -802,9 +814,7 @@ const Register = () => {
                                                     <label htmlFor="termsCheckbox" className="ms-2">
                                                         I accept the <Link href="Images/Privacy Policy.pdf" target="_blank" onClick={handleViewTerms}>Privacy Policy</Link><br />
                                                     </label><br /><br/>
-                                                    <Link className="mb-5 text-uppercase display-4" style={{ textDecoration: "none", fontSize: "30px", color: "red" }} href="/uploaddocument">
-                                                        Upload Biodata
-                                                    </Link>
+                                                    
                                                 </div>
                                             
                                             </>

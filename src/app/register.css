@@ -1,141 +1,137 @@
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
-  padding-left: .75em;
-  padding-right: .75em;
-  }
-  .card-registration .select-arrow {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.card-registration .select-arrow {
   top: 13px;
-  }
-  .select-container {
-    position: relative;
-    display: inline-block;
-    width: 550px; /* Increase the width as needed */
-  }
-  
-  .select-container select {
-    width: 100%; /* Ensure the select box takes the full width of the container */
-    padding-right: 30px; /* Adjust padding to make space for the arrow */
-    -webkit-appearance: none; /* Remove default arrow */
-    -moz-appearance: none; /* Remove default arrow */
-    appearance: none; /* Remove default arrow */
-    box-sizing: border-box; /* Include padding in the element's width and height */
-  }
-  
-  .select-container::after {
-    content: '▼'; /* Unicode character for the arrow */
-    position: absolute;
-    right: 10px; /* Position the arrow inside the container */
-    top: 70%;
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
-  }
-  form-group{
-    margin-bottom: 20px;
-  }
-  .flex-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .h3-container {
-    margin-right: 20px;
-  }
-  
-  .arrow-container {
-    position: absolute;
-    right: 10px; /* Adjust as needed */
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensures clicks pass through to select element */
-  }
-  
-  .arrow-wrapper {
-    width: 12px; /* Increase width of the arrow */
-    height: 12px; /* Increase height of the arrow */
-    border-left: 6px solid transparent; /* Adjust size of the arrow */
-    border-right: 6px solid transparent; /* Adjust size of the arrow */
-    border-top: 8px solid #201f1f; /* Arrow color and height */
-  }
-  .flex-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-              /* Full width */
-      }
-  
-  .flex-content {
-    text-align: center; /* Center text inside the flex content */
-  }
-  
-  h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  /* Container for the form details */
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 550px; /* Set a maximum width */
+}
+
+.select-container select {
+  width: 100%; /* Ensure the select box takes the full width of the container */
+  padding-right: 2em; /* Adjust padding to make space for the arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.select-container::after {
+  content: '▼';
+  position: absolute;
+  right: 0.75em; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+form-group {
+  margin-bottom: 1.25em; /* Use relative units for margins */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h3-container {
+  margin-right: 1.25em; /* Use relative units for margins */
+}
+
+.arrow-container {
+  position: absolute;
+  right: 0.75em; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrow-wrapper {
+  width: 0.75em; /* Use relative units for arrow size */
+  height: 0.75em; /* Use relative units for arrow size */
+  border-left: 0.375em solid transparent;
+  border-right: 0.375em solid transparent;
+  border-top: 0.5em solid #201f1f;
+}
+
+.flex-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.875rem; /* Use relative units */
+  margin-bottom: 0.625em; /* Use relative units */
+}
+
 .details-container {
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 1.25em;
+  padding: 1.25em;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 0.5em;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .details-container:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.375em 0.75em rgba(0, 0, 0, 0.2);
 }
 
-/* Header for the details section */
 .details-header {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.625em;
   color: #333;
   font-weight: 600;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
+  border-bottom: 0.125em solid #007bff;
+  padding-bottom: 0.3125em;
 }
 
-/* Content area for the details section */
 .details-content {
-  white-space: pre-wrap; /* Preserve formatting of the JSON */
+  white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
 }
 
-/* Button to toggle view details */
 .view-details-button {
-  background-color: #007bff; /* Primary blue */
+  background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
+  padding: 0.75em 1.5625em; /* Use relative units */
+  border-radius: 0.3125em;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 .view-details-button:hover {
-  background-color: #0056b3; /* Darker blue */
-  transform: translateY(-2px);
+  background-color: #0056b3;
+  transform: translateY(-0.125em);
 }
 
 .view-details-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Focus ring */
+  box-shadow: 0 0 0 0.1875em rgba(0, 0, 0, 0.2);
 }
 
-/* Styles for the form buttons */
 .btn-warning {
   background-color: #ffc107;
   border-color: #ffc107;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625em 1.25em; /* Use relative units */
+  border-radius: 0.3125em;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
@@ -144,17 +140,14 @@
   border-color: #e0a800;
 }
 
-/* Optional: Make the form responsive */
 @media (max-width: 768px) {
   .details-container {
-    padding: 15px;
+    padding: 1em;
   }
 
   .view-details-button {
     width: 100%;
-    padding: 10px;
+    padding: 0.625em;
     font-size: 0.9rem;
   }
 }
-
-  

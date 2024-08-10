@@ -84,8 +84,7 @@ const Footer = () => {
     
       <div class="text-center p-4">
 
-        © 2024 Copyright:
-        <a class="text-reset fw-bold" href="https://ConnectSoulmate.com/">ConnectSoulmate.com</a>
+      Copyright © 2024 ConnectSoulmate
       </div>
     </footer>
 
