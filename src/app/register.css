@@ -1,3 +1,4 @@
+/* General Styles */
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
@@ -11,31 +12,33 @@
 
 .select-container {
   position: relative;
-  display: inline-block;
-  width: 100%; /* Use 100% width for responsiveness */
-  max-width: 550px; /* Set a maximum width */
+  display: block; /* Ensures full width of container */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 550px; /* Max width to prevent stretching */
+  box-sizing: border-box; /* Includes padding in the width */
+  margin: 0 auto; /* Center container */
 }
 
 .select-container select {
-  width: 100%; /* Ensure the select box takes the full width of the container */
-  padding-right: 2em; /* Adjust padding to make space for the arrow */
+  width: 100%; /* Full width of the container */
+  padding-right: 2em; /* Space for the arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .select-container::after {
   content: '▼';
   position: absolute;
-  right: 0.75em; /* Adjust as needed */
+  right: 0.75em;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 form-group {
-  margin-bottom: 1.25em; /* Use relative units for margins */
+  margin-bottom: 1.25em; /* Spacing between form elements */
 }
 
 .flex-container {
@@ -45,20 +48,20 @@ form-group {
 }
 
 .h3-container {
-  margin-right: 1.25em; /* Use relative units for margins */
+  margin-right: 1.25em;
 }
 
 .arrow-container {
   position: absolute;
-  right: 0.75em; /* Adjust as needed */
+  right: 0.75em;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .arrow-wrapper {
-  width: 0.75em; /* Use relative units for arrow size */
-  height: 0.75em; /* Use relative units for arrow size */
+  width: 0.75em;
+  height: 0.75em;
   border-left: 0.375em solid transparent;
   border-right: 0.375em solid transparent;
   border-top: 0.5em solid #201f1f;
@@ -69,8 +72,8 @@ form-group {
 }
 
 h1 {
-  font-size: 1.875rem; /* Use relative units */
-  margin-bottom: 0.625em; /* Use relative units */
+  font-size: 1.875rem;
+  margin-bottom: 0.625em;
 }
 
 .details-container {
@@ -108,7 +111,7 @@ h1 {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 0.75em 1.5625em; /* Use relative units */
+  padding: 0.75em 1.5625em;
   border-radius: 0.3125em;
   cursor: pointer;
   font-size: 1rem;
@@ -130,7 +133,7 @@ h1 {
   background-color: #ffc107;
   border-color: #ffc107;
   color: #fff;
-  padding: 0.625em 1.25em; /* Use relative units */
+  padding: 0.625em 1.25em;
   border-radius: 0.3125em;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
@@ -140,6 +143,7 @@ h1 {
   border-color: #e0a800;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .details-container {
     padding: 1em;
