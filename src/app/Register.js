@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import './register.css'
 import { userExists } from './ValidationUtlis';
 import Registerdisplaydata from './Registerdisplaydata';
 import dummydata from './Registerdummydata/dummydata';
