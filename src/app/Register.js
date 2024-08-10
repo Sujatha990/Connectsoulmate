@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import "./register.css";
 import Link from 'next/link';
 import { userExists } from './ValidationUtlis';
 import Registerdisplaydata from './Registerdisplaydata';
@@ -208,7 +207,7 @@ const Register = () => {
                                         {currentStep === 1 && (
                                             <>
                                                 <div className="flex-container">
-                                                    <h1 className="mb-5 text-uppercase display-4">
+                                                    <h1 className="mb-5 text-uppercase display-4" style={{textAlign:'center'}}>
                                                         Register
                                                     </h1>
                                                 </div>
