@@ -5,6 +5,7 @@ import { userExists } from './ValidationUtlis';
 import Registerdisplaydata from './Registerdisplaydata';
 import dummydata from './Registerdummydata/dummydata';
 import Image from 'next/image';
+import "./register.css"
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -197,7 +198,7 @@ const Register = () => {
                                         src="/Images/reg.jpg"
                                         alt="Sample"
                                         className="img-fluid"
-                                        width={800}
+                                        width={600}
                                         height={800}
                                         style={{ maxWidth: "100%", height: "800px", borderRadius: ".25rem" }}
                                     />
@@ -207,7 +208,7 @@ const Register = () => {
                                         {currentStep === 1 && (
                                             <>
                                                 <div className="flex-container">
-                                                    <h1 className="mb-5 text-uppercase display-4">
+                                                    <h1 className="mb-5 text-uppercase display-4" style={{textAlign:"center"}}>
                                                         Register
                                                     </h1>
                                                 </div>

@@ -145,7 +145,7 @@ const Searchreg = () => {
                                         alt="Sample"
                                         className="img-fluid custom-image"
                                         width={800}
-                                        height={1000} // Adjusted height
+                                        height={1200} // Adjusted height
                                     />
                                 </div>
                                 <div className="col-xl-6">
