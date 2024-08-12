@@ -5,6 +5,7 @@ import { userExists } from './ValidationUtlis';
 import Registerdisplaydata from './Registerdisplaydata';
 import dummydata from './Registerdummydata/dummydata';
 import Image from 'next/image';
+import './Upgradereg.css'; // Import CSS file
 
 const Upgradereg1 = () => {
     const [formData, setFormData] = useState({
@@ -19,7 +20,6 @@ const Upgradereg1 = () => {
         email: '',
         password: '',
         confirmPassword: '',
-       
     });
 
     const [currentStep, setCurrentStep] = useState(1);
@@ -93,7 +93,6 @@ const Upgradereg1 = () => {
         localStorage.setItem('isRegistered', 'true');
         localStorage.setItem('formData', JSON.stringify(formData));
 
-
         // Proceed with form submission (e.g., send data to server)
         alert('Registration successful');
         window.location.href = '/upgrade'; // Redirect to the upgrade page
@@ -111,7 +110,6 @@ const Upgradereg1 = () => {
             email: '',
             password: '',
             confirmPassword: '',
-           
         });
         setError('');
         setPasswordError('');
@@ -130,24 +128,24 @@ const Upgradereg1 = () => {
     const toggleViewDetails = () => {
         setViewDetails(!viewDetails);
     };
+
     // Convert formData to query string
     const queryString = new URLSearchParams(formData).toString();
 
     return (
         <section className="h-100 bg-dark">
-            <div className="container py-5 h-100">
+            <div className="custom-container py-5 h-100"> {/* Apply custom class here */}
                 <div className="row d-flex justify-content-center align-items-center h-100">
-                    <div className="col">
+                    <div className="col-md-10 col-lg-8">
                         <div className="card card-registration my-4">
                             <div className="row g-0">
                                 <div className="col-xl-6 d-none d-xl-block">
                                     <Image
                                         src="/Images/reg.jpg"
                                         alt="Sample"
-                                        className="img-fluid"
+                                        className="img-fluid custom-image"
                                         width={800}
-                                        height={800}
-                                        style={{ maxWidth: "100%", height: "1200px", borderRadius: ".25rem" }}
+                                        height={1000} // Adjusted height
                                     />
                                 </div>
                                 <div className="col-xl-6">
@@ -155,7 +153,7 @@ const Upgradereg1 = () => {
                                         {currentStep === 1 && (
                                             <>
                                                 <div className="flex-container">
-                                                    <h1 className="mb-5 text-uppercase display-4">
+                                                    <h1 className="mb-5 text-uppercase display-4 " style={{textAlign:"center"}}>
                                                         Register
                                                     </h1>
                                                 </div>
@@ -163,7 +161,7 @@ const Upgradereg1 = () => {
 
                                                 {error && <div className="alert alert-danger">{error}</div>}
                                                 <form onSubmit={handleSubmit}>
-                                                    <div className="form-group mb-3 ">
+                                                    <div className="form-group mb-3">
                                                         <label htmlFor="profile">Select Profile</label>
                                                         <div className="position-relative">
                                                             <select
@@ -192,13 +190,13 @@ const Upgradereg1 = () => {
                                                     </div>
 
                                                     <div className="form-group mb-3">
-                                                        <label htmlFor="firstName">Name</label>
+                                                        <label htmlFor="Name">Name</label>
                                                         <input
                                                             type="text"
                                                             className="form-control"
-                                                            id="firstName"
-                                                            name="firstName"
-                                                            value={formData.firstName}
+                                                            id="Name"
+                                                            name="Name"
+                                                            value={formData.Name}
                                                             onChange={handleChange}
                                                             placeholder="Enter first name"
                                                             required
@@ -342,13 +340,6 @@ const Upgradereg1 = () => {
                                                 </form>
                                             </>
                                         )}
-
-
-
-                                       
-                                        
-                                        
-
                                     </div>
                                 </div>
                             </div>
@@ -356,9 +347,8 @@ const Upgradereg1 = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 
 export default Upgradereg1;
-
