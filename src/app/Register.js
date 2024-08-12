@@ -414,10 +414,10 @@ const Register = () => {
                                                             onChange={handleChange}
                                                             required
                                                         >
-                                                            <option value="">Select Religion</option>
-                                                            <option value="Christianity">Christianity</option>
-                                                            <option value="Hinduism">Hinduism</option>
-                                                            <option value="Other">Other</option>
+                                                            <option value="" disabled>Select Religion</option>
+                                                            <option value="christianity">Christianity</option>
+                                                            <option value="hinduism">Hinduism</option>
+                                                            <option value="other">Other</option>
                                                         </select>
                                                         <div className="arrow-container">
                                                             <div className="arrow-wrapper">
@@ -435,12 +435,13 @@ const Register = () => {
                                                             name="gender"
                                                             value={formData.gender}
                                                             onChange={handleChange}
+                                                            required
                                                         >
-                                                            <option value="">Select Gender</option>
-                                                            <option value="Male">Male</option>
-                                                            <option value="Female">Female</option>
-                                                            <option value="Other">Other</option>
-                                                            <option value="Prefer not to say">Prefer not to say</option>
+                                                            <option value="" disabled>Select Gender</option>
+                                                            <option value="male">Male</option>
+                                                            <option value="female">Female</option>
+                                                            <option value="other">Other</option>
+                                                            <option value="prefer not to say">Prefer not to say</option>
                                                         </select>
                                                         <div className="arrow-container">
                                                             <div className="arrow-wrapper">
@@ -535,7 +536,7 @@ const Register = () => {
                                                             id="maritalStatus"
                                                             name="maritalStatus"
                                                             value={formData.maritalStatus}
-                                                            onChange={handleChange}
+                                                            onChange={handleChange} required
                                                         >
                                                             <option value="">Select Marital Status</option>
                                                             <option value="Single">Single</option>
@@ -683,8 +684,9 @@ const Register = () => {
                                                             name="highestEducation"
                                                             value={formData.highestEducation}
                                                             onChange={handleChange}
+                                                            required
                                                         >
-                                                            <option value="">Select Highest Education</option>
+                                                            <option value="" disabled>Select Highest Education</option>
                                                             <option value="High School">High School</option>
                                                             <option value="Diploma">Diploma</option>
                                                             <option value="Bachelors">Bachelors</option>
@@ -708,13 +710,14 @@ const Register = () => {
                                                             name="employedIn"
                                                             value={formData.employedIn}
                                                             onChange={handleChange}
+                                                            required
                                                         >
-                                                            <option value="">Select Employment</option>
-                                                            <option value="Government">Government</option>
-                                                            <option value="Private">Private</option>
-                                                            <option value="Business">Business</option>
-                                                            <option value="Self-employed">Self-employed</option>
-                                                            <option value="Not working">Not working</option>
+                                                            <option value="" disabled>Select Employment</option>
+                                                            <option value="government">Government</option>
+                                                            <option value="private">Private</option>
+                                                            <option value="business">Business</option>
+                                                            <option value="self-employed">Self-employed</option>
+                                                            <option value="not working">Not working</option>
                                                         </select>
                                                         <div className="arrow-container">
                                                             <div className="arrow-wrapper">
