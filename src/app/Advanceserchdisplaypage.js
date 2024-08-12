@@ -89,10 +89,7 @@ const Advanceserchdisplaypage = ({ storedData }) => {
         <div className="results-list">
           {storedData.map((data, index) => (
             <div key={data.id} className="result-item">
-<<<<<<< HEAD
-=======
 
->>>>>>> dc5f07473a1dc5d378a7f373d905054b3479bd1f
                 <div className="profile-photo-container">
               <Image 
                 src={data.image} 
