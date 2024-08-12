@@ -135,7 +135,7 @@ const Searchreg = () => {
     return (
         <section className="h-100 bg-dark">
             <div className="custom-container py-5 h-100"> {/* Apply custom class here */}
-                <div className="row d-flex justify-content-center align-items-center h-100">
+                <div className="row d-flex justify-content-center h-100">
                     <div className="col-md-10 col-lg-8">
                         <div className="card card-registration my-4">
                             <div className="row g-0">
@@ -165,7 +165,7 @@ const Searchreg = () => {
                                                         <label htmlFor="profile">Select Profile</label>
                                                         <div className="position-relative">
                                                             <select
-                                                                className="form-control form-control-arrow"
+                                                                className="form-control w-100 w-md-50"
                                                                 id="profile"
                                                                 name="profile"
                                                                 value={formData.profile}
@@ -193,7 +193,7 @@ const Searchreg = () => {
                                                         <label htmlFor="Name">Name</label>
                                                         <input
                                                             type="text"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="Name"
                                                             name="Name"
                                                             value={formData.Name}
@@ -207,7 +207,7 @@ const Searchreg = () => {
                                                         <label htmlFor="surName">Sur Name</label>
                                                         <input
                                                             type="text"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="surName"
                                                             name="surName"
                                                             value={formData.surName}
@@ -221,7 +221,7 @@ const Searchreg = () => {
                                                         <label htmlFor="dateOfBirth">Date of Birth</label>
                                                         <input
                                                             type="date"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="dateOfBirth"
                                                             name="dateOfBirth"
                                                             value={formData.dateOfBirth}
@@ -234,7 +234,7 @@ const Searchreg = () => {
                                                         <label htmlFor="address">Address</label>
                                                         <input
                                                             type="text"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="address"
                                                             name="address"
                                                             value={formData.address}
@@ -248,7 +248,7 @@ const Searchreg = () => {
                                                         <label htmlFor="city">City</label>
                                                         <input
                                                             type="text"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="city"
                                                             name="city"
                                                             value={formData.city}
@@ -262,7 +262,7 @@ const Searchreg = () => {
                                                         <label htmlFor="pincode">Pincode</label>
                                                         <input
                                                             type="text"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="pincode"
                                                             name="pincode"
                                                             value={formData.pincode}
@@ -278,7 +278,7 @@ const Searchreg = () => {
                                                         <label htmlFor="phoneNumber">Phone Number</label>
                                                         <input
                                                             type="tel"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="phoneNumber"
                                                             name="phoneNumber"
                                                             value={formData.phoneNumber}
@@ -292,7 +292,7 @@ const Searchreg = () => {
                                                         <label htmlFor="email">Email</label>
                                                         <input
                                                             type="email"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="email"
                                                             name="email"
                                                             value={formData.email}
@@ -306,7 +306,7 @@ const Searchreg = () => {
                                                         <label htmlFor="password">Password</label>
                                                         <input
                                                             type="password"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="password"
                                                             name="password"
                                                             value={formData.password}
@@ -321,7 +321,7 @@ const Searchreg = () => {
                                                         <label htmlFor="confirmPassword">Re-enter Password</label>
                                                         <input
                                                             type="password"
-                                                            className="form-control"
+                                                            className="form-control w-100 w-md-50"
                                                             id="confirmPassword"
                                                             name="confirmPassword"
                                                             value={formData.confirmPassword}
