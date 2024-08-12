@@ -494,7 +494,7 @@ const Register = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="gothram">Gothram</label>
                                                     <input
                                                         type="text"
@@ -507,7 +507,7 @@ const Register = () => {
                                                     />
                                                 </div>
 
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="familyDetails">Family Details</label>
                                                     <textarea
                                                         className="form-control"
@@ -550,7 +550,7 @@ const Register = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="height">Height</label>
                                                     <input
                                                         type="text"
@@ -562,7 +562,7 @@ const Register = () => {
                                                         placeholder="Enter height"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="weight">Weight</label>
                                                     <input
                                                         type="text"
@@ -574,7 +574,7 @@ const Register = () => {
                                                         placeholder="Enter weight"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="complexion">Complexion</label>
                                                     <input
                                                         type="text"
@@ -586,7 +586,7 @@ const Register = () => {
                                                         placeholder="Enter complexion"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="lifestyle">Lifestyle</label>
                                                     <input
                                                         type="text"
@@ -599,7 +599,7 @@ const Register = () => {
                                                     />
                                                 </div>
 
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="hobbies">Hobbies</label>
                                                     <input
                                                         type="text"
@@ -611,7 +611,7 @@ const Register = () => {
                                                         placeholder="Enter hobbies"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="expectations">Expectations</label>
                                                     <input
                                                         type="text"
@@ -624,7 +624,7 @@ const Register = () => {
                                                     />
                                                 </div>
 
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="preferences">Preferences</label>
                                                     <input
                                                         type="text"
@@ -655,7 +655,7 @@ const Register = () => {
                                                     </div>
 
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="disability">Disability (if any)</label>
                                                     <input
                                                         type="text"
@@ -723,7 +723,7 @@ const Register = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="occupation">Occupation</label>
                                                     <input
                                                         type="text"
@@ -735,7 +735,7 @@ const Register = () => {
                                                         placeholder="Enter occupation"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="annualIncome">Annual Income</label>
                                                     <input
                                                         type="text"
@@ -747,7 +747,7 @@ const Register = () => {
                                                         placeholder="Enter annual income"
                                                     />
                                                 </div>
-                                                <div className="form-group" style={{ marginBottom: '20px' }}>
+                                                <div className="form-group mb-3" style={{ marginBottom: '20px' }}>
                                                     <label htmlFor="aboutYourself">About Yourself</label>
                                                     <textarea
                                                         className="form-control"
