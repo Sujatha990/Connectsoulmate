@@ -1,5 +1,6 @@
 .custom-image {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
     height: 1200px; /* Default height */
     object-fit: cover; /* Ensure image covers the area */
     border-radius: .25rem;
