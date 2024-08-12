@@ -1,8 +1,10 @@
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  padding: 0.75em;
+  text-align: left;
 }
 
 .card-registration .select-arrow {
@@ -35,7 +37,9 @@
 }
 
 form-group {
-  margin-bottom: 1.25em; /* Use relative units for margins */
+  margin-bottom: 1.25em;
+  width: 100%; /* Use relative units for margins */
+  text-align: left;
 }
 
 .flex-container {
@@ -141,6 +145,9 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .form-control {
+    width: 100%;
+  }
   .details-container {
     padding: 1em;
   }
