@@ -11,5 +11,7 @@
 .btn {
   margin-top: 1rem; /* Reduces the space above the button */
 }
-
-/* Optional: Adjust margins and paddings for other elements as needed */
+.form-control::placeholder {
+  color: #6c757d; /* Set placeholder text color */
+  opacity: 1; /* Ensure placeholder is fully opaque */
+}
