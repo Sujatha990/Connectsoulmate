@@ -934,11 +934,9 @@ const Register = () => {
                     )}
                     {currentStep === 5 && (
                       <>
-<<<<<<< HEAD
+
                         <h2 className="mb-4" style={{ textAlign: "center" }}>Fill in the Required Fields Below to Complete Process</h2>
-=======
                         <h2 className="mb-4" style={{ textAlign: "center" }}>Fill in the Required Fields Below to Complete Your Registration Process</h2>
->>>>>>> 927a87709fb1a551832b0625c1d9d9cd29a8bbff
 
                         <div className="form-outline mb-3">
                           <label className="form-label" htmlFor="photo">Profile Photo</label>
