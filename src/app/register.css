@@ -1,16 +1,15 @@
-.container {
-  width: 100%; /* Adjust this as needed */
-  max-width: 1200px; /* Example max-width */
-  margin: 0 auto; /* Center align container */
+/* Search3.css */
+
+.form-outline {
+  margin-bottom: 1rem; /* Reduces the space between input fields */
 }
-/* Example of ensuring full-width inputs */
-.form-control {
-  width: 100%;
+
+.card-body {
+  padding: 1rem; /* Reduces padding inside the card body */
 }
-/* Example to handle overflow */
-.container {
-  overflow: hidden; /* Prevent overflow issues */
+
+.btn {
+  margin-top: 1rem; /* Reduces the space above the button */
 }
-.form-control {
-  box-sizing: border-box; /* Ensure padding and border are included in width */
-}
+
+/* Optional: Adjust margins and paddings for other elements as needed */
