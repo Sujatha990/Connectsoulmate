@@ -936,7 +936,6 @@ const Register = () => {
                       <>
 
                         <h2 className="mb-4" style={{ textAlign: "center" }}>Fill in the Required Fields Below to Complete Process</h2>
-                        <h2 className="mb-4" style={{ textAlign: "center" }}>Fill in the Required Fields Below to Complete Your Registration Process</h2>
 
                         <div className="form-outline mb-3">
                           <label className="form-label" htmlFor="photo">Profile Photo</label>
