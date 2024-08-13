@@ -599,7 +599,7 @@ const Register = () => {
                     {currentStep === 3 && (
                       <>
                      
-                     <h2 className="mb-4" style={{ textAlign: "center" }}>Please provide us with your basic details</h2>
+                     <h2 className="mb-4" style={{ textAlign: "center" }}>Provide Detailed Personal Information to Complete Your Profile</h2>
                      <div className="form-outline mb-3">
                           <label className="form-label" htmlFor="maritalStatus">Marital Status</label>
                           <select
@@ -934,7 +934,7 @@ const Register = () => {
                     )}
                     {currentStep === 5 && (
                       <>
-                        <h2 className="mb-4" style={{ textAlign: "center" }}>Please provide us with your basic details</h2>
+                        <h2 className="mb-4" style={{ textAlign: "center" }}>Fill in the Required Fields Below to Complete Your Registration Process</h2>
 
                         <div className="form-outline mb-3">
                           <label className="form-label" htmlFor="photo">Profile Photo</label>
