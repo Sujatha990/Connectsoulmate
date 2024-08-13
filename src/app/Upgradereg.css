@@ -1,50 +1,16 @@
-.custom-image {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    height: 1200px; /* Default height */
-    object-fit: cover; /* Ensure image covers the area */
-    border-radius: .25rem;
-}
+/* Search3.css */
 
-.custom-container {
-    max-width: 1500px; /* Container width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Padding for spacing */
-}
-
-.card-body {
-    padding: 2rem; /* Padding within card */
-}
-
-.form-control {
-    font-size: 1rem; /* Font size for form controls */
-}
-
-h1 {
-    font-size: 2rem; /* Font size for header */
-}
-
-h4 {
-    font-size: 1.25rem; /* Font size for subheader */
-}
-
-/* Media queries */
-@media (min-width: 1200px) {
-    .custom-image {
-        height: 1200px; /* Height for larger screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .custom-image {
-        height: 500px; /* Height for smaller screens */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Font size for headers on smaller screens */
-    }
-
-    .form-control {
-        font-size: 0.875rem; /* Font size for form controls on smaller screens */
-    }
-}
+.form-outline {
+    margin-bottom: 1rem; /* Reduces the space between input fields */
+  }
+  
+  .card-body {
+    padding: 1rem; /* Reduces padding inside the card body */
+  }
+  
+  .btn {
+    margin-top: 1rem; /* Reduces the space above the button */
+  }
+  
+  /* Optional: Adjust margins and paddings for other elements as needed */
+  

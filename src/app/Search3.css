@@ -1,0 +1,15 @@
+/* Search3.css */
+
+.form-outline {
+  margin-bottom: 1rem; /* Reduces the space between input fields */
+}
+
+.card-body {
+  padding: 1rem; /* Reduces padding inside the card body */
+}
+
+.btn {
+  margin-top: 1rem; /* Reduces the space above the button */
+}
+
+/* Optional: Adjust margins and paddings for other elements as needed */

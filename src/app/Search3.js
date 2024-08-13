@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { userExists } from './ValidationUtlis';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
-import "./Upgradereg.css";
+import "./Search3.css";
 
-const Searchreg = () => {
+const Search3 = () => {
   const [formData, setFormData] = useState({
     profile: '',
     Name: '',
@@ -64,7 +64,7 @@ const Searchreg = () => {
     localStorage.setItem('formData', JSON.stringify(formData));
 
     alert('Registration successful');
-    window.location.href = '/search';
+    window.location.href = '/upgrade';
 
     setFormData({
       profile: '',
@@ -371,4 +371,4 @@ const Searchreg = () => {
   );
 };
 
-export default Searchreg;
+export default Search3;
